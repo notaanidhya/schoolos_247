@@ -1,0 +1,96 @@
+.section { background: white; }
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.sub {
+  font-size: var(--text-lg);
+  color: var(--muted);
+  font-style: italic;
+  font-family: var(--font-display);
+  font-weight: 500;
+  max-width: 540px;
+  text-align: center;
+}
+
+.table {
+  max-width: 900px;
+  margin-inline: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.colHeader {
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  align-items: center;
+}
+
+.colHeader:first-child {
+  border-right: 1px solid var(--border);
+}
+
+.colBadgeOld {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: #EF4444;
+  background: #FEF2F2;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+}
+
+.colBadgeNew {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--green);
+  background: var(--green-50);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition-fast);
+}
+
+.row:last-child { border-bottom: none; }
+.row:hover { background: var(--surface); }
+
+.cellOld, .cellNew {
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-sm);
+  font-family: var(--font-display);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.cellOld {
+  color: var(--muted);
+  border-right: 1px solid var(--border);
+}
+
+.cellOld svg { color: #EF4444; flex-shrink: 0; }
+
+.cellNew { color: var(--text-secondary); }
+.cellNew svg { color: var(--green); flex-shrink: 0; }

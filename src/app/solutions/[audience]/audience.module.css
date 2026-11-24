@@ -1,0 +1,222 @@
+.page {
+  background-color: var(--surface);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero {
+  padding: 90px 0 70px;
+  background: linear-gradient(180deg, #101c36 0%, #152549 100%);
+  color: #ffffff;
+  text-align: center;
+}
+
+.roleBadge {
+  display: inline-block;
+  background: rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #93c5fd;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
+.headline {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.25;
+  max-width: 860px;
+  margin: 0 auto 12px;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #60a5fa;
+  margin-bottom: 16px;
+}
+
+.sub {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  max-width: 760px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+
+.heroActions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contentSection {
+  padding: 80px 0;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 36px;
+  margin-bottom: 60px;
+}
+
+.challengesCard {
+  background: #ffffff;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
+}
+
+.solutionsCard {
+  background: #ffffff;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.05);
+}
+
+.colHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.colHeader h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.colIcon {
+  font-size: 1.4rem;
+}
+
+.challengeList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.challengeList li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.crossIcon {
+  color: #ef4444;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.solList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.solItem h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.solItem p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.testimonialBox {
+  background: linear-gradient(135deg, #101c36 0%, #152243 100%);
+  border-radius: 20px;
+  padding: 40px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.quoteMark {
+  font-size: 4rem;
+  color: rgba(37, 99, 235, 0.4);
+  line-height: 0.8;
+  margin-bottom: 16px;
+  font-family: Georgia, serif;
+}
+
+.quoteText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #f1f5f9;
+  margin-bottom: 20px;
+}
+
+.quoteAuthor strong {
+  display: block;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.quoteAuthor span {
+  display: block;
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+.ctaSection {
+  padding: 0 0 100px;
+}
+
+.ctaBox {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  padding: 50px 32px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.04);
+}
+
+.ctaBox h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.ctaBox p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+@media (max-width: 900px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+  .headline {
+    font-size: 2.2rem;
+  }
+}

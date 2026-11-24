@@ -1,0 +1,271 @@
+.page {
+  background-color: var(--surface);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(180deg, #101c36 0%, #172a53 100%);
+  color: #ffffff;
+  text-align: center;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #93c5fd;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
+  background: #60a5fa;
+  border-radius: 50%;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+.heroSub {
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  max-width: 760px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+
+.heroActions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.architectureSection {
+  padding: 100px 0;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--blue);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+
+.sectionTitle {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+
+.sectionSub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.layersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.layerCard {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  padding: 32px 36px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.layerCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+}
+
+.layerAi {
+  border-color: rgba(139, 92, 246, 0.4);
+  background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%);
+}
+
+.layerHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.layerPill {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--blue);
+  background: rgba(37, 99, 235, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.layerName {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.aiTag {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.layerDesc {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.layerPills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.layerPills span {
+  background: var(--surface);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: var(--text);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.coexistenceSection {
+  padding: 40px 0 100px;
+}
+
+.coexistenceCard {
+  background: linear-gradient(135deg, #101c36 0%, #152549 100%);
+  border-radius: 24px;
+  padding: 56px 48px;
+  color: #ffffff;
+}
+
+.badgeLight {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  color: #93c5fd;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+}
+
+.coexistenceTitle {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.coexistenceText {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  line-height: 1.65;
+  margin-bottom: 32px;
+  max-width: 860px;
+}
+
+.pointsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.point strong {
+  display: block;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.point span {
+  display: block;
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.ctaSection {
+  padding: 60px 0 100px;
+}
+
+.ctaCard {
+  background: #ffffff;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.06);
+}
+
+.ctaCard h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.ctaCard p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+@media (max-width: 1024px) {
+  .heroTitle {
+    font-size: 2.4rem;
+  }
+  .pointsList {
+    grid-template-columns: 1fr;
+  }
+}
