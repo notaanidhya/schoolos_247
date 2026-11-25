@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './how-it-works.module.css';
 
 export const metadata: Metadata = {
-  title: 'How It Works — SchoolOS',
+  title: 'How It Works — School247',
   description:
     'A simple 3-step operational transition: Connect your school, bring everyone together, and automate daily administrative workflows.',
 };
@@ -53,7 +53,7 @@ export default function HowItWorksPage() {
       <section className={styles.hero}>
         <div className={styles.container}>
           <div className={styles.badge}>OPERATIONAL BLUEPRINT</div>
-          <h1 className={styles.title}>How SchoolOS transforms your daily school operations</h1>
+          <h1 className={styles.title}>How School247 transforms your daily school operations</h1>
           <p className={styles.sub}>
             A structured, 3-step transition that eliminates administrative chaos without disrupting your current academic year.
           </p>

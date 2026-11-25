@@ -64,7 +64,7 @@ export default function PricingTeaser() {
             Transparent plans aligned with your school’s scale
           </h2>
           <p className={styles.sub}>
-            No rigid one-size-fits-all software fees. SchoolOS pricing is customized
+            No rigid one-size-fits-all software fees. School247 pricing is customized
             based on student enrollment, active modules, and campus structure.
           </p>
         </div>

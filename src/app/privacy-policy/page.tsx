@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import styles from '../legal.module.css';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy & DPDP Framework — SchoolOS',
+  title: 'Privacy Policy & DPDP Framework — School247',
   description:
-    'Comprehensive privacy policy and data governance practices of SchoolOS in alignment with the Indian Digital Personal Data Protection Act.',
+    'Comprehensive privacy policy and data governance practices of School247 in alignment with the Indian Digital Personal Data Protection Act.',
 };
 
 export default function PrivacyPolicyPage() {
@@ -20,17 +20,17 @@ export default function PrivacyPolicyPage() {
           <div className={styles.content}>
             <h2>1. Introduction & Institutional Scope</h2>
             <p>
-              SchoolOS (“we,” “our,” or “the Platform”) operates as an operational technology software-as-a-service (SaaS)
+              School247 (“we,” “our,” or “the Platform”) operates as an operational technology software-as-a-service (SaaS)
               provider for recognized primary, secondary, and senior secondary schools in India. This Privacy Policy
               governs how personal data belonging to school administrators, faculty, parents, and minor students is collected,
               processed, isolated, and stored.
             </p>
 
-            <h2>2. Role of SchoolOS as a Data Processor</h2>
+            <h2>2. Role of School247 as a Data Processor</h2>
             <p>
               Under the Indian Digital Personal Data Protection (DPDP) Act, the educational institution (the school) acts
               as the <strong>Data Fiduciary</strong>, determining the legal basis and scope of student and guardian record
-              collection. SchoolOS operates strictly as a <strong>Data Processor</strong> on behalf of and according to
+              collection. School247 operates strictly as a <strong>Data Processor</strong> on behalf of and according to
               explicit operational instructions provided by the contracting school.
             </p>
 
@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
                 portal onboarding via OTP authentication.
               </li>
               <li>
-                SchoolOS never undertakes behavioral tracking, targeted commercial advertising, or profiling of children.
+                School247 never undertakes behavioral tracking, targeted commercial advertising, or profiling of children.
               </li>
               <li>
                 Student profiles are accessible exclusively by verified legal guardians linked through pre-authorized
@@ -81,11 +81,11 @@ export default function PrivacyPolicyPage() {
 
             <h2>6. Artificial Intelligence & Automated Processing</h2>
             <p>
-              AI features within SchoolOS (such as administrative draft generation and parent FAQ resolution) operate
+              AI features within School247 (such as administrative draft generation and parent FAQ resolution) operate
               strictly under human-in-the-loop controls. Student disciplinary records, confidential health details,
               and personally identifying numbers are never exposed to public LLM training datasets.
             </p>
-
+            
             <h2>7. Data Retention & Deletion Rights</h2>
             <p>
               Institutional records are maintained for the duration of the school’s active service agreement. Upon termination
@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
             <p>
               If you have inquiries regarding privacy practices, DPDP alignment, or exercising data rights, please contact:
               <br />
-              <strong>Data Protection Officer, SchoolOS</strong>
+              <strong>Data Protection Officer, School247</strong>
               <br />
               Email: <a href="mailto:privacy@school247.in">privacy@school247.in</a>
             </p>

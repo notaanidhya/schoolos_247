@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './solutions.module.css';
 
 export const metadata: Metadata = {
-  title: 'Solutions for School Stakeholders — SchoolOS',
+  title: 'Solutions for School Stakeholders — School247',
   description:
     'Tailored school operations solutions for School Owners, Principals, Administrators, Teachers, and Parents.',
 };
@@ -84,7 +84,7 @@ export default function SolutionsPage() {
           <div className={styles.badge}>ROLE-BASED EXCELLENCE</div>
           <h1 className={styles.title}>Tailored solutions for every member of your school community</h1>
           <p className={styles.sub}>
-            Different stakeholders have different needs. Discover how SchoolOS delivers clarity to leadership,
+            Different stakeholders have different needs. Discover how School247 delivers clarity to leadership,
             efficiency to educators, and peace of mind to parents.
           </p>
         </div>
@@ -122,7 +122,7 @@ export default function SolutionsPage() {
       <section className={styles.ctaSection}>
         <div className={styles.container}>
           <div className={styles.ctaBox}>
-            <h2>See how SchoolOS works for your specific team</h2>
+            <h2>See how School247 works for your specific team</h2>
             <p>Schedule a live demo to experience the role-specific consoles and mobile apps.</p>
             <Link href="/book-demo" className="btn btn-primary btn--lg">
               Book a Role-Tailored Demo

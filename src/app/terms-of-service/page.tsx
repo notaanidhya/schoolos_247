@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import styles from '../legal.module.css';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service — SchoolOS',
-  description: 'Terms and conditions governing the institutional use of the SchoolOS SaaS platform.',
+  title: 'Terms of Service — School247',
+  description: 'Terms and conditions governing the institutional use of the School247 SaaS platform.',
 };
 
 export default function TermsOfServicePage() {
@@ -17,13 +17,13 @@ export default function TermsOfServicePage() {
           <div className={styles.content}>
             <h2>1. Agreement to Terms</h2>
             <p>
-              By signing an institutional Service Agreement or accessing the SchoolOS platform, the contracting school,
+              By signing an institutional Service Agreement or accessing the School247 platform, the contracting school,
               educational trust, or individual user agrees to be bound by these Terms of Service.
             </p>
 
             <h2>2. Authorized Institutional Use</h2>
             <p>
-              SchoolOS licenses its web and mobile applications solely for legitimate academic and administrative
+              School247 licenses its web and mobile applications solely for legitimate academic and administrative
               management of accredited schools. Users shall not attempt to reverse engineer, disrupt network infrastructure,
               or bypass authentication controls.
             </p>
@@ -42,7 +42,7 @@ export default function TermsOfServicePage() {
 
             <h2>5. Intellectual Property</h2>
             <p>
-              SchoolOS retains all rights, title, and interest in the platform software, user interface design, and
+              School247 retains all rights, title, and interest in the platform software, user interface design, and
               proprietary workflow engines. The school retains 100% proprietary ownership over all institutional data
               and student records inputted into the platform.
             </p>

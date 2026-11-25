@@ -15,9 +15,9 @@ import {
 import styles from './security.module.css';
 
 export const metadata: Metadata = {
-  title: 'Security, Privacy & Data Protection — SchoolOS',
+  title: 'Security, Privacy & Data Protection — School247',
   description:
-    'How SchoolOS protects sensitive student, teacher, and institutional data with DPDP alignment, AES-256 encryption, and tenant isolation.',
+    'How School247 protects sensitive student, teacher, and institutional data with DPDP alignment, AES-256 encryption, and tenant isolation.',
 };
 
 export default function SecurityPage() {
@@ -25,7 +25,7 @@ export default function SecurityPage() {
     {
       icon: <Lock size={24} />,
       title: 'Encryption in Transit & at Rest',
-      desc: 'All communications with SchoolOS servers are encrypted using modern Transport Layer Security (TLS 1.3). Sensitive student records, documents, and database volumes are encrypted at rest using AES-256 standards.',
+      desc: 'All communications with School247 servers are encrypted using modern Transport Layer Security (TLS 1.3). Sensitive student records, documents, and database volumes are encrypted at rest using AES-256 standards.',
     },
     {
       icon: <Shield size={24} />,
@@ -55,7 +55,7 @@ export default function SecurityPage() {
     {
       icon: <FileCheck size={24} />,
       title: 'Secure Student Document Vault',
-      desc: 'Transfer certificates, birth records, and medical files uploaded to SchoolOS are stored in private, cryptographically signed storage buckets accessible only via temporary, authenticated tokens.',
+      desc: 'Transfer certificates, birth records, and medical files uploaded to School247 are stored in private, cryptographically signed storage buckets accessible only via temporary, authenticated tokens.',
     },
     {
       icon: <Trash2 size={24} />,
@@ -70,7 +70,7 @@ export default function SecurityPage() {
     {
       icon: <ShieldCheck size={24} />,
       title: 'Alignment with Indian DPDP Framework',
-      desc: 'SchoolOS is actively designed to align with India’s Digital Personal Data Protection (DPDP) Act, prioritizing parental consent protocols, legitimate data usage, and lawful institutional storage.',
+      desc: 'School247 is actively designed to align with India’s Digital Personal Data Protection (DPDP) Act, prioritizing parental consent protocols, legitimate data usage, and lawful institutional storage.',
     },
   ];
 
@@ -102,9 +102,9 @@ export default function SecurityPage() {
           <div className={styles.statementBox}>
             <h3>Our Security Integrity Commitment</h3>
             <p>
-              We commit to complete transparency. SchoolOS maintains modern architectural safeguards, encryption standards,
+              We commit to complete transparency. School247 maintains modern architectural safeguards, encryption standards,
               and strict data residency within India. We do not make premature claims of third-party audit badges without
-              official institutional verification. When you partner with SchoolOS, you receive a clear, enforceable Data
+              official institutional verification. When you partner with School247, you receive a clear, enforceable Data
               Processing Agreement outlining all technical safeguards.
             </p>
             <div className={styles.actionRow}>

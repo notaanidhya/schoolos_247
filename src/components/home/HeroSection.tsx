@@ -16,7 +16,7 @@ export default function HeroSection() {
           {/* Badge */}
           <div className={styles.badge}>
             <span className={styles.badgeDot} />
-            <span>Introducing SchoolOS for Indian Schools</span>
+            <span>Introducing School247 for Indian Schools</span>
           </div>
 
           {/* Headline */}
@@ -79,7 +79,7 @@ export default function HeroSection() {
                 <span className={`${styles.dot} ${styles.dotYellow}`} />
                 <span className={`${styles.dot} ${styles.dotGreen}`} />
               </div>
-              <div className={styles.mockupTitle}>SchoolOS Dashboard</div>
+              <div className={styles.mockupTitle}>School247 Dashboard</div>
             </div>
             {/* Mockup content */}
             <div className={styles.mockupBody}>

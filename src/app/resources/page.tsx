@@ -5,7 +5,7 @@ import NewsletterForm from '@/components/NewsletterForm';
 import styles from './resources.module.css';
 
 export const metadata: Metadata = {
-  title: 'Resources & School Guides — SchoolOS',
+  title: 'Resources & School Guides — School247',
   description:
     'Operational playbooks, DPDP guides, and best practices for modern Indian school administrators and educators.',
 };

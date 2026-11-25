@@ -14,7 +14,7 @@ export default function ContactForm() {
         </div>
         <h3 style={{ color: 'var(--navy)', marginBottom: '8px' }}>Message Received!</h3>
         <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>
-          Thank you for reaching out. A SchoolOS educational representative will respond within 4 business hours.
+          Thank you for reaching out. A School247 educational representative will respond within 4 business hours.
         </p>
       </div>
     );

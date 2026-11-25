@@ -14,7 +14,7 @@ export default function DemoCtaSection() {
           </div>
 
           <h2 className={styles.headline}>
-            Ready to experience SchoolOS in your school?
+            Ready to experience School247 in your school?
           </h2>
 
           <p className={styles.sub}>

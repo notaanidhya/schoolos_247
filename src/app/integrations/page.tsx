@@ -3,9 +3,9 @@ import Link from 'next/link';
 import styles from './integrations.module.css';
 
 export const metadata: Metadata = {
-  title: 'Integrations & Ecosystem — SchoolOS',
+  title: 'Integrations & Ecosystem — School247',
   description:
-    'Discover how SchoolOS connects with WhatsApp, payment gateways, messaging infrastructure, and legacy school databases.',
+    'Discover how School247 connects with WhatsApp, payment gateways, messaging infrastructure, and legacy school databases.',
 };
 
 export default function IntegrationsPage() {
@@ -67,7 +67,7 @@ export default function IntegrationsPage() {
           <div className={styles.badge}>CONNECTED ECOSYSTEM</div>
           <h1 className={styles.title}>Connecting the tools your school community relies on</h1>
           <p className={styles.sub}>
-            SchoolOS acts as the unifying operations layer. We bridge parent communication channels, payment systems,
+            School247 acts as the unifying operations layer. We bridge parent communication channels, payment systems,
             and existing school software into one synchronized hub.
           </p>
         </div>
@@ -113,7 +113,7 @@ export default function IntegrationsPage() {
             <div className={styles.legacyContent}>
               <h3 className={styles.legacyTitle}>Connecting With Your Existing School ERP</h3>
               <p className={styles.legacyText}>
-                Already invested in an existing software for accounting, admissions, or payroll? SchoolOS provides
+                Already invested in an existing software for accounting, admissions, or payroll? School247 provides
                 custom REST API connectors, automated CSV/Excel roster imports, and scheduled sync jobs so your institution
                 gains modern parent mobile apps and AI workflows without discarding current systems.
               </p>

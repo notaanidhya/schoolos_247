@@ -37,7 +37,7 @@ export default function HowItWorks() {
               Up and running in <span className="gradient-text">three steps</span>
             </h2>
             <p className="lead" style={{ maxWidth: '520px', textAlign: 'center' }}>
-              SchoolOS is designed to fit around your school — not the other way around.
+              School247 is designed to fit around your school — not the other way around.
             </p>
           </div>
         </AnimateOnScroll>

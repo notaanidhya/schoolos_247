@@ -4,7 +4,7 @@ import { ShieldCheck, Zap, Users } from 'lucide-react';
 import styles from './about.module.css';
 
 export const metadata: Metadata = {
-  title: 'About Us — SchoolOS',
+  title: 'About Us — School247',
   description:
     'Our mission to empower Indian schools with a modern AI operations layer that connects administrators, teachers, and parents.',
 };
@@ -27,7 +27,7 @@ export default function AboutPage() {
         <div className={styles.container}>
           <div className={styles.storyCard}>
             <div className={styles.storyHeader}>
-              <div className={styles.eyebrow}>WHY SCHOOLOS EXISTS</div>
+              <div className={styles.eyebrow}>WHY SCHOOL247 EXISTS</div>
               <h2>Built from first-hand observations inside Indian schools</h2>
             </div>
             <div className={styles.storyBody}>
@@ -44,7 +44,7 @@ export default function AboutPage() {
                 daily user adoption.
               </p>
               <p>
-                <strong>SchoolOS was born out of a simple belief:</strong> Schools do not need more software complexity.
+                <strong>School247 was born out of a simple belief:</strong> Schools do not need more software complexity.
                 They need a modern, intelligent operations layer that works alongside what they already have, automates
                 repetitive administrative friction, and connects school communities with dignity and simplicity.
               </p>
@@ -81,7 +81,7 @@ export default function AboutPage() {
       <section className={styles.ctaSection}>
         <div className={styles.container}>
           <div className={styles.ctaBox}>
-            <h2>Join the SchoolOS journey</h2>
+            <h2>Join the School247 journey</h2>
             <p>Discover how your school can become a connected, digitally effortless institution.</p>
             <Link href="/book-demo" className="btn btn-primary btn--lg">
               Book a Leadership Consultation

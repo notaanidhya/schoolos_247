@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import styles from '../legal.module.css';
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy — SchoolOS',
-  description: 'How SchoolOS utilizes strictly necessary session cookies and privacy-respecting analytics.',
+  title: 'Cookie Policy — School247',
+  description: 'How School247 utilizes strictly necessary session cookies and privacy-respecting analytics.',
 };
 
 export default function CookiePolicyPage() {
@@ -21,9 +21,9 @@ export default function CookiePolicyPage() {
               states and user preferences.
             </p>
 
-            <h2>2. How SchoolOS Uses Cookies</h2>
+            <h2>2. How School247 Uses Cookies</h2>
             <p>
-              SchoolOS uses cookies exclusively for essential platform functionality and strictly privacy-preserving
+              School247 uses cookies exclusively for essential platform functionality and strictly privacy-preserving
               operational metrics:
             </p>
             <ul>
@@ -43,14 +43,14 @@ export default function CookiePolicyPage() {
 
             <h2>3. No Third-Party Commercial Advertising Cookies</h2>
             <p>
-              SchoolOS does <strong>NOT</strong> host third-party behavioral advertising cookies, ad networks, or data
+              School247 does <strong>NOT</strong> host third-party behavioral advertising cookies, ad networks, or data
               broker trackers on any student, parent, or administrative portals.
             </p>
 
             <h2>4. Managing Your Cookie Preferences</h2>
             <p>
               You can control or disable cookies via your browser settings. However, disabling strictly necessary cookies
-              will prevent logging in to the SchoolOS portal.
+              will prevent logging in to the School247 portal.
             </p>
 
             <h2>5. Contact Us</h2>

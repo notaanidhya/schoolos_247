@@ -116,7 +116,7 @@ export default function DemoBookingsAdminPage() {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `schoolos_demo_leads_${new Date().toISOString().slice(0, 10)}.csv`);
+    link.setAttribute('download', `school247_demo_leads_${new Date().toISOString().slice(0, 10)}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -145,7 +145,7 @@ export default function DemoBookingsAdminPage() {
               <Database size={24} color="#2563EB" />
               <h1>Demo Bookings Database</h1>
             </div>
-            <p>SQLite Database connected at <code>data/schoolos.db</code></p>
+            <p>SQLite Database connected at <code>data/school247.db</code></p>
           </div>
           <div className={styles.actions}>
             <button onClick={fetchBookings} className="btn btn-secondary btn--sm">

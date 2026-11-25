@@ -3,9 +3,9 @@ import Link from 'next/link';
 import styles from './platform.module.css';
 
 export const metadata: Metadata = {
-  title: 'Platform Overview — SchoolOS',
+  title: 'Platform Overview — School247',
   description:
-    'Discover the architecture of SchoolOS — The AI Operations Layer connecting school administration, parents, and teachers seamlessly.',
+    'Discover the architecture of School247 — The AI Operations Layer connecting school administration, parents, and teachers seamlessly.',
 };
 
 export default function PlatformPage() {
@@ -23,7 +23,7 @@ export default function PlatformPage() {
           </h1>
           <p className={styles.heroSub}>
             Most school software fails because it tries to replace everything with another rigid database.
-            SchoolOS connects your administration, teachers, and parents through synchronized workflows,
+            School247 connects your administration, teachers, and parents through synchronized workflows,
             AI assistance, and zero-friction mobile interfaces.
           </p>
           <div className={styles.heroActions}>
@@ -135,7 +135,7 @@ export default function PlatformPage() {
                 Don’t replace what works. Make it work seamlessly.
               </h2>
               <p className={styles.coexistenceText}>
-                Schools invest heavily in software setups and accounting databases. SchoolOS doesn’t demand
+                Schools invest heavily in software setups and accounting databases. School247 doesn’t demand
                 a painful data migration or forcing teachers to abandon existing workflows overnight.
                 We connect your front office, classroom, and parent community while keeping your core records secure.
               </p>
@@ -162,7 +162,7 @@ export default function PlatformPage() {
       <section className={styles.ctaSection}>
         <div className={styles.container}>
           <div className={styles.ctaCard}>
-            <h2>See the SchoolOS platform in action</h2>
+            <h2>See the School247 platform in action</h2>
             <p>Schedule a live 25-minute interactive walkthrough customized to your school.</p>
             <Link href="/book-demo" className="btn btn-primary btn--lg">
               Book Your Free Platform Demo

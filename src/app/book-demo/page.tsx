@@ -85,7 +85,7 @@ export default function BookDemoPage() {
             </div>
 
             <h1 className={styles.headline}>
-              Experience how SchoolOS simplifies your school’s daily operations.
+              Experience how School247 simplifies your school’s daily operations.
             </h1>
 
             <p className={styles.desc}>
@@ -114,7 +114,7 @@ export default function BookDemoPage() {
                   <div className={styles.stepNum}>3</div>
                   <div>
                     <strong>ERP Coexistence & Roadmap</strong>
-                    <span>How SchoolOS connects with your existing setup with zero data loss or operational disruption.</span>
+                    <span>How School247 connects with your existing setup with zero data loss or operational disruption.</span>
                   </div>
                 </li>
                 <li>

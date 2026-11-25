@@ -5,9 +5,9 @@ import ContactForm from '@/components/ContactForm';
 import styles from './contact.module.css';
 
 export const metadata: Metadata = {
-  title: 'Contact Us — SchoolOS',
+  title: 'Contact Us — School247',
   description:
-    'Get in touch with the SchoolOS educational technology team for product demonstrations, institutional partnerships, and support.',
+    'Get in touch with the School247 educational technology team for product demonstrations, institutional partnerships, and support.',
 };
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
           <div className={styles.badge}>GET IN TOUCH</div>
           <h1 className={styles.title}>We’re here to help your school thrive</h1>
           <p className={styles.sub}>
-            Have questions about SchoolOS, need a customized institutional consultation, or want to discuss
+            Have questions about School247, need a customized institutional consultation, or want to discuss
             integration with your current systems? Our team is available.
           </p>
         </div>

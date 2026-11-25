@@ -6,11 +6,11 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://school247.in"),
   title: {
-    default: "SchoolOS — The AI Operations Layer for Schools",
-    template: "%s | SchoolOS",
+    default: "School247 — The AI Operations Layer for Schools",
+    template: "%s | School247",
   },
   description:
-    "SchoolOS brings school administration, parent communication, attendance and everyday workflows together in one intelligent platform. Book a live demo today.",
+    "School247 brings school administration, parent communication, attendance and everyday workflows together in one intelligent platform. Book a live demo today.",
   keywords: [
     "school management software",
     "school ERP India",
@@ -19,17 +19,18 @@ export const metadata: Metadata = {
     "school operations platform",
     "AI school management",
     "school SaaS India",
-    "SchoolOS",
     "School247",
+    "School 247",
+    "School 24/7",
   ],
-  authors: [{ name: "SchoolOS" }],
-  creator: "SchoolOS",
+  authors: [{ name: "School247" }],
+  creator: "School247",
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://school247.in",
-    siteName: "SchoolOS",
-    title: "SchoolOS — The AI Operations Layer for Schools",
+    siteName: "School247",
+    title: "School247 — The AI Operations Layer for Schools",
     description:
       "Run your school smarter. Not harder. One platform to simplify school operations, connect parents and teachers, and automate everyday administrative work.",
     images: [
@@ -37,13 +38,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "SchoolOS — The AI Operations Layer for Schools",
+        alt: "School247 — The AI Operations Layer for Schools",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SchoolOS — The AI Operations Layer for Schools",
+    title: "School247 — The AI Operations Layer for Schools",
     description: "Run your school smarter. Not harder.",
     images: ["/og-image.png"],
   },
@@ -78,7 +79,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "SchoolOS",
+              name: "School247",
               description:
                 "The AI Operations Layer for Schools — connecting school operations, parents and teachers through intelligent workflows.",
               url: "https://school247.in",
@@ -87,7 +88,7 @@ export default function RootLayout({
               offers: { "@type": "Offer", price: "0", priceCurrency: "INR" },
               provider: {
                 "@type": "Organization",
-                name: "SchoolOS",
+                name: "School247",
                 url: "https://school247.in",
               },
             }),

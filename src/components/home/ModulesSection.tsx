@@ -156,7 +156,7 @@ const MODULES: ModuleData[] = [
     badge: 'AI-Powered',
     badgeType: 'ai',
     title: 'Intelligent automation and natural language administrative search',
-    desc: 'The defining differentiator of SchoolOS. Human-in-the-loop AI handles repetitive parent queries, drafts administrative circulars, and lets management query metrics using natural language.',
+    desc: 'The defining differentiator of School247. Human-in-the-loop AI handles repetitive parent queries, drafts administrative circulars, and lets management query metrics using natural language.',
     features: [
       '24/7 AI parent FAQ concierge (admissions, timings, events)',
       'Natural language query: "Show fee collection for Class 8 vs Class 9"',
@@ -267,7 +267,7 @@ export default function ModulesSection() {
                   <span className={styles.dotGreen} />
                 </div>
                 <div className={styles.windowTitle}>
-                  SchoolOS — {current.name} Console
+                  School247 — {current.name} Console
                 </div>
                 <span className={styles.liveTag}>LIVE SYNC</span>
               </div>
@@ -295,7 +295,7 @@ export default function ModulesSection() {
                 </div>
 
                 <div className={styles.auditStamp}>
-                  Verified by SchoolOS Role-Based Security • DPDP Compliant
+                  Verified by School247 Role-Based Security • DPDP Compliant
                 </div>
               </div>
             </div>

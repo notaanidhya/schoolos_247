@@ -28,7 +28,7 @@ export function getDatabase(): Database.Database {
     if (!fs.existsSync(dataDir)) {
       fs.mkdirSync(dataDir, { recursive: true });
     }
-    const dbPath = path.join(dataDir, 'schoolos.db');
+    const dbPath = path.join(dataDir, 'school247.db');
     dbInstance = new Database(dbPath);
 
     // Initialize Schema

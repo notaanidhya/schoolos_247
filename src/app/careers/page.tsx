@@ -4,9 +4,9 @@ import { Briefcase, Zap, ShieldCheck, HeartHandshake } from 'lucide-react';
 import styles from './careers.module.css';
 
 export const metadata: Metadata = {
-  title: 'Careers — SchoolOS',
+  title: 'Careers — School247',
   description:
-    'Join SchoolOS in building the modern operating layer for Indian schools. Explore open engineering, design, and implementation roles.',
+    'Join School247 in building the modern operating layer for Indian schools. Explore open engineering, design, and implementation roles.',
 };
 
 const VALUES = [
@@ -92,7 +92,7 @@ export default function CareersPage() {
           <div className={styles.rolesSection}>
             <div className={styles.rolesHeader}>
               <h2>Open Positions</h2>
-              <p>Find your next role with SchoolOS</p>
+              <p>Find your next role with School247</p>
             </div>
 
             <div className={styles.jobsList}>

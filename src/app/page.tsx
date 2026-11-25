@@ -12,7 +12,7 @@ import DemoCtaSection from '@/components/home/DemoCtaSection';
 import FaqSection from '@/components/home/FaqSection';
 
 export const metadata: Metadata = {
-  title: 'SchoolOS — Run Your School Smarter. Not Harder.',
+  title: 'School247 — Run Your School Smarter. Not Harder.',
   description:
     'The AI Operations Layer for Schools. Bring school administration, parent communication, attendance and everyday workflows together in one intelligent platform.',
 };

@@ -5,7 +5,7 @@ import NewsletterForm from '@/components/NewsletterForm';
 import styles from './blog.module.css';
 
 export const metadata: Metadata = {
-  title: 'Blog & Educational Insights — SchoolOS',
+  title: 'Blog & Educational Insights — School247',
   description:
     'Thought leadership, operational analysis, and regulatory updates for Indian school principals, trustees, and administrators.',
 };
@@ -42,7 +42,7 @@ const POSTS = [
   {
     tag: 'Technology Architecture',
     title: 'Multi-Tenant Data Isolation in Educational Cloud Systems',
-    desc: 'A technical deep-dive into how SchoolOS guarantees complete logical data separation between institutions to prevent unauthorized access and data commingling.',
+    desc: 'A technical deep-dive into how School247 guarantees complete logical data separation between institutions to prevent unauthorized access and data commingling.',
     date: 'Sep 28, 2026',
     readTime: '8 min read',
   },
@@ -60,7 +60,7 @@ export default function BlogPage() {
     <div className={styles.page}>
       <section className={styles.hero}>
         <div className={styles.container}>
-          <div className={styles.badge}>SCHOOLOS DISPATCH</div>
+          <div className={styles.badge}>SCHOOL247 DISPATCH</div>
           <h1 className={styles.title}>Insights for Forward-Thinking School Leadership</h1>
           <p className={styles.sub}>
             In-depth perspectives on institutional governance, teacher ergonomics, parent engagement, and data protection in Indian K-12 education.

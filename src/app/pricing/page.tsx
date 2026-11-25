@@ -4,7 +4,7 @@ import PricingTeaser from '@/components/home/PricingTeaser';
 import styles from './pricing.module.css';
 
 export const metadata: Metadata = {
-  title: 'Pricing & Institutional Plans — SchoolOS',
+  title: 'Pricing & Institutional Plans — School247',
   description:
     'Transparent, customized pricing for Indian schools based on student enrollment, active modules, and campus structure.',
 };
@@ -31,7 +31,7 @@ export default function PricingPage() {
           <div className={styles.pilotCard}>
             <div className={styles.pilotContent}>
               <div className={styles.pilotBadge}>LIMITED TERM OFFER</div>
-              <h2 className={styles.pilotTitle}>The SchoolOS Academic Pilot Program</h2>
+              <h2 className={styles.pilotTitle}>The School247 Academic Pilot Program</h2>
               <p className={styles.pilotText}>
                 We believe in proving value before asking for long-term institutional commitments.
                 Select private schools (300 to 1,500 students) qualify for a <strong>45-day zero-risk trial</strong> covering

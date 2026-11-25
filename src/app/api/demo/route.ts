@@ -87,7 +87,7 @@ export async function POST(request: Request) {
       console.warn('Backup write to leads.json failed:', fsErr);
     }
 
-    console.log('[SchoolOS Database Record Saved]:', newBooking.id, newBooking.schoolName);
+    console.log('[School247 Database Record Saved]:', newBooking.id, newBooking.schoolName);
 
     return NextResponse.json(
       {

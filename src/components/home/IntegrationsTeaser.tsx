@@ -24,7 +24,7 @@ export default function IntegrationsTeaser() {
               <span style={{ color: 'var(--blue-light)' }}> you already use</span>
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 'var(--text-lg)', textAlign: 'center', maxWidth: '520px' }}>
-              SchoolOS connects to popular platforms. All integrations are planned and will be
+              School247 connects to popular platforms. All integrations are planned and will be
               activated progressively.
             </p>
           </div>

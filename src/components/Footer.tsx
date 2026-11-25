@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const FOOTER_LINKS = {
@@ -44,8 +45,18 @@ export default function Footer() {
           {/* Brand */}
           <div className={styles.brand}>
             <Link href="/" className={styles.logo}>
-              <div className={styles.logoIcon}><span>S</span></div>
-              <span className={styles.logoText}>SchoolOS</span>
+              <div className={styles.logoIcon}>
+                <Image
+                  src="/logo.png"
+                  alt="School247 Logo"
+                  width={38}
+                  height={38}
+                  className={styles.logoImage}
+                />
+              </div>
+              <span className={styles.logoText}>
+                School<span className={styles.logoTextAccent}>247</span>
+              </span>
             </Link>
             <p className={styles.tagline}>
               The AI Operations Layer for Schools.<br />
@@ -79,7 +90,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className={styles.bottom}>
           <p className={styles.copy}>
-            © 2026 SchoolOS. All rights reserved. Built for schools across India.
+            © 2026 School247. All rights reserved. Built for schools across India.
           </p>
           <div className={styles.bottomBadge}>
             <span className={styles.madeBadge} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>

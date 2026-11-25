@@ -10,8 +10,8 @@ interface FaqItem {
 
 const FAQS: FaqItem[] = [
   {
-    q: 'Do we have to replace our existing school ERP software to use SchoolOS?',
-    a: 'No. SchoolOS is designed as an operations layer that can work alongside your existing setup. If your school already uses software for basic fee receipts or accounting, SchoolOS connects parent communication, mobile applications, admissions, and attendance without disrupting your current database.',
+    q: 'Do we have to replace our existing school ERP software to use School247?',
+    a: 'No. School247 is designed as an operations layer that can work alongside your existing setup. If your school already uses software for basic fee receipts or accounting, School247 connects parent communication, mobile applications, admissions, and attendance without disrupting your current database.',
   },
   {
     q: 'How long does onboarding and deployment take for a typical school?',
@@ -19,26 +19,26 @@ const FAQS: FaqItem[] = [
   },
   {
     q: 'How will parents download and use the app? What if some parents do not have smartphones?',
-    a: 'Parents receive a secure, 1-tap activation SMS with their child’s profile pre-linked. The app is free on Android and accessible via modern web browsers. For parents who do not use smartphones or lack internet access, SchoolOS automatically falls back to standard SMS and WhatsApp notifications for critical alerts such as unexcused absences and emergency circulars.',
+    a: 'Parents receive a secure, 1-tap activation SMS with their child’s profile pre-linked. The app is free on Android and accessible via modern web browsers. For parents who do not use smartphones or lack internet access, School247 automatically falls back to standard SMS and WhatsApp notifications for critical alerts such as unexcused absences and emergency circulars.',
   },
   {
-    q: 'How does SchoolOS protect sensitive student and guardian data?',
-    a: 'Data privacy is paramount. SchoolOS adheres to Indian data protection standards, including the Digital Personal Data Protection (DPDP) Act. All data is encrypted in transit (TLS 1.3) and at rest (AES-256). Each school has strict tenant data isolation, and parent profiles are strictly verified to prevent unauthorized access to child records.',
+    q: 'How does School247 protect sensitive student and guardian data?',
+    a: 'Data privacy is paramount. School247 adheres to Indian data protection standards, including the Digital Personal Data Protection (DPDP) Act. All data is encrypted in transit (TLS 1.3) and at rest (AES-256). Each school has strict tenant data isolation, and parent profiles are strictly verified to prevent unauthorized access to child records.',
   },
   {
     q: 'Can teachers easily mark attendance and homework without spending extra hours?',
-    a: 'Yes. Teacher ergonomics was the primary driver in designing SchoolOS. Roll call takes under 60 seconds per section with a clean 1-tap interface. Homework distribution takes less than 2 minutes. Crucially, parent-teacher queries are routed within strict working hours so teachers are never disturbed on personal WhatsApp during evenings or weekends.',
+    a: 'Yes. Teacher ergonomics was the primary driver in designing School247. Roll call takes under 60 seconds per section with a clean 1-tap interface. Homework distribution takes less than 2 minutes. Crucially, parent-teacher queries are routed within strict working hours so teachers are never disturbed on personal WhatsApp during evenings or weekends.',
   },
   {
-    q: 'What is the role of AI in SchoolOS? Is it safe for school use?',
-    a: 'AI in SchoolOS acts strictly as an administrative assistant with human oversight ("human-in-the-loop"). It drafts circular notices, answers common parent admission FAQs, and provides natural-language reports for leadership (e.g. "Show attendance trend for Grade 9"). AI never makes automated decisions on disciplinary or grading matters.',
+    q: 'What is the role of AI in School247? Is it safe for school use?',
+    a: 'AI in School247 acts strictly as an administrative assistant with human oversight ("human-in-the-loop"). It drafts circular notices, answers common parent admission FAQs, and provides natural-language reports for leadership (e.g. "Show attendance trend for Grade 9"). AI never makes automated decisions on disciplinary or grading matters.',
   },
   {
-    q: 'How does school fee collection work with SchoolOS?',
-    a: 'SchoolOS integrates with leading RBI-authorized Indian payment gateways (like Razorpay). Parents can pay via UPI (Google Pay, PhonePe, Paytm), Net Banking, or Debit/Credit Cards. Receipts are generated immediately in the parent app, and payments reconcile in real time on the school accountant’s dashboard.',
+    q: 'How does school fee collection work with School247?',
+    a: 'School247 integrates with leading RBI-authorized Indian payment gateways (like Razorpay). Parents can pay via UPI (Google Pay, PhonePe, Paytm), Net Banking, or Debit/Credit Cards. Receipts are generated immediately in the parent app, and payments reconcile in real time on the school accountant’s dashboard.',
   },
   {
-    q: 'What ongoing support does SchoolOS provide?',
+    q: 'What ongoing support does School247 provide?',
     a: 'Every school is assigned an Account Specialist. We provide phone, WhatsApp, and email support during school operating hours, plus comprehensive video tutorials and help guides for staff, teachers, and parents.',
   },
 ];

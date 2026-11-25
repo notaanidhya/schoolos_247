@@ -21,7 +21,7 @@ const AUDIENCE_DATA: Record<string, AudienceDetail> = {
     role: 'School Owners & Trustees',
     headline: 'Total operational clarity and financial accountability across your campuses',
     tagline: 'Built for executive leadership demanding consolidated control',
-    sub: 'Stop relying on verbal updates or conflicting spreadsheet reports. SchoolOS provides school owners with a single real-time dashboard of admissions, fee recovery, and campus compliance.',
+    sub: 'Stop relying on verbal updates or conflicting spreadsheet reports. School247 provides school owners with a single real-time dashboard of admissions, fee recovery, and campus compliance.',
     painPoints: [
       'Incomplete visibility into fee defaulters and delayed cash flows',
       'Uncertainty about admission enquiry conversions across streams',
@@ -93,7 +93,7 @@ const AUDIENCE_DATA: Record<string, AudienceDetail> = {
     role: 'School Administrators & Front Office',
     headline: 'Automate repetitive registers, fee receipts, and parent inquiries',
     tagline: 'Cut daily paperwork by 70% with intelligent administrative workflows',
-    sub: 'Front office staff and administrative clerks spend hundreds of hours on paper registers, manual phone calls, and fee receipts. SchoolOS automates the busywork so your staff can focus on parent satisfaction.',
+    sub: 'Front office staff and administrative clerks spend hundreds of hours on paper registers, manual phone calls, and fee receipts. School247 automates the busywork so your staff can focus on parent satisfaction.',
     painPoints: [
       'Endless phone calls from parents asking basic admission and timing questions',
       'Manual writing and stamping of paper fee receipts and cash reconciliations',
@@ -129,7 +129,7 @@ const AUDIENCE_DATA: Record<string, AudienceDetail> = {
     role: 'Teachers & Faculty',
     headline: 'Spend time inspiring students, not wrestling with administrative registers',
     tagline: 'Simple 1-tap tools designed specifically for busy classroom teachers',
-    sub: 'SchoolOS respects educators’ time. Complete morning roll call in under a minute, publish homework with one tap, and communicate with parents strictly within school hours—without ever sharing your personal phone number.',
+    sub: 'School247 respects educators’ time. Complete morning roll call in under a minute, publish homework with one tap, and communicate with parents strictly within school hours—without ever sharing your personal phone number.',
     painPoints: [
       'Spending 15+ minutes every morning marking registers and filling log sheets',
       'Parents messaging personal WhatsApp at night or on weekends about homework',
@@ -165,7 +165,7 @@ const AUDIENCE_DATA: Record<string, AudienceDetail> = {
     role: 'Parents & Guardians',
     headline: 'Stay transparently connected to your child’s educational journey',
     tagline: 'A modern, dependable mobile app for informed and confident parenting',
-    sub: 'Never wonder about unannounced school closures, missing homework, or fee due dates again. SchoolOS provides parents with a clean, verified smartphone window into their child’s daily school life.',
+    sub: 'Never wonder about unannounced school closures, missing homework, or fee due dates again. School247 provides parents with a clean, verified smartphone window into their child’s daily school life.',
     painPoints: [
       'Finding out late about forgotten homework assignments or upcoming tests',
       'Anxiety over whether a child arrived safely at school on time',
@@ -254,11 +254,11 @@ export default async function AudiencePage({
               </ul>
             </div>
 
-            {/* Right: SchoolOS Solutions */}
+            {/* Right: School247 Solutions */}
             <div className={styles.solutionsCard}>
               <div className={styles.colHeader}>
                 <span className={styles.colIcon}><Sparkles size={22} color="#2563EB" /></span>
-                <h3>How SchoolOS Solves It</h3>
+                <h3>How School247 Solves It</h3>
               </div>
               <div className={styles.solList}>
                 {data.solutions.map((s, idx) => (
@@ -287,7 +287,7 @@ export default async function AudiencePage({
       <section className={styles.ctaSection}>
         <div className={styles.container}>
           <div className={styles.ctaBox}>
-            <h2>Ready to see how SchoolOS transforms {data.role}?</h2>
+            <h2>Ready to see how School247 transforms {data.role}?</h2>
             <p>Schedule a 25-minute live consultation with our school workflow team.</p>
             <Link href={`/book-demo?audience=${data.slug}`} className="btn btn-primary btn--lg">
               Schedule Your Free Demo

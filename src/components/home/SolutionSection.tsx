@@ -50,7 +50,7 @@ export default function SolutionSection() {
               One platform. <span className="gradient-text">Four powerful layers.</span>
             </h2>
             <p className="lead" style={{ maxWidth: '560px', textAlign: 'center' }}>
-              SchoolOS connects what was previously fragmented — bringing administration,
+              School247 connects what was previously fragmented — bringing administration,
               communication, and intelligence into a single, coherent system.
             </p>
           </div>

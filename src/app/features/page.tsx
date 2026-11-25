@@ -3,9 +3,9 @@ import Link from 'next/link';
 import styles from './features.module.css';
 
 export const metadata: Metadata = {
-  title: 'All Features & Modules — SchoolOS',
+  title: 'All Features & Modules — School247',
   description:
-    'Comprehensive product features of SchoolOS: School Administration, Admissions, Attendance, Parent App, Fees & Finance, Academics, Communication, and AI Operations.',
+    'Comprehensive product features of School247: School Administration, Admissions, Attendance, Parent App, Fees & Finance, Academics, Communication, and AI Operations.',
 };
 
 const MODULE_LIST = [
@@ -139,7 +139,7 @@ export default function FeaturesPage() {
           <div className={styles.heroBadge}>COMPLETE MODULE BREAKDOWN</div>
           <h1 className={styles.heroTitle}>Everything your school needs to operate with excellence</h1>
           <p className={styles.heroSub}>
-            Explore all eight interconnected modules of SchoolOS. Designed to reduce administrative friction,
+            Explore all eight interconnected modules of School247. Designed to reduce administrative friction,
             connect families, and give leadership complete operational confidence.
           </p>
         </div>

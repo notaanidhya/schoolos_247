@@ -16,7 +16,7 @@ export default function ComparisonSection() {
       <div className="container">
         <AnimateOnScroll>
           <div className={styles.header}>
-            <div className="badge badge--navy" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--blue)' }}>Why SchoolOS</div>
+            <div className="badge badge--navy" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--blue)' }}>Why School247</div>
             <h2 className="heading-lg" style={{ textAlign: 'center' }}>
               A better way to run your school
             </h2>
@@ -34,7 +34,7 @@ export default function ComparisonSection() {
                 <span className={styles.colBadgeOld}>Traditional approach</span>
               </div>
               <div className={styles.colHeader}>
-                <span className={styles.colBadgeNew}>SchoolOS vision</span>
+                <span className={styles.colBadgeNew}>School247 vision</span>
               </div>
             </div>
             {ROWS.map((row, i) => (

@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 const NAV_LINKS = [
@@ -80,9 +81,18 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className={styles.logo}>
           <div className={styles.logoIcon}>
-            <span>S</span>
+            <Image
+              src="/logo.png"
+              alt="School247 Logo"
+              width={38}
+              height={38}
+              priority
+              className={styles.logoImage}
+            />
           </div>
-          <span className={styles.logoText}>SchoolOS</span>
+          <span className={styles.logoText}>
+            School<span className={styles.logoTextAccent}>247</span>
+          </span>
         </Link>
 
         {/* Desktop Nav */}
