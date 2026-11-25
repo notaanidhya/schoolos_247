@@ -57,7 +57,7 @@ export default function CookiePolicyPage() {
             <p>
               If you have questions regarding our cookie practices, please contact:
               <br />
-              Email: <a href="mailto:privacy@schoolos.in">privacy@schoolos.in</a>
+              Email: <a href="mailto:privacy@school247.in">privacy@school247.in</a>
             </p>
           </div>
         </div>

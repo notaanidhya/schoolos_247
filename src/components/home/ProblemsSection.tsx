@@ -1,27 +1,28 @@
+import { FileSpreadsheet, MessageSquare, Shuffle, BarChart3 } from 'lucide-react';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import styles from './ProblemsSection.module.css';
 
 const PROBLEMS = [
   {
-    icon: '📋',
+    icon: <FileSpreadsheet size={22} color="#EF4444" />,
     title: 'Manual administration',
     desc: 'Repeated data entry, registers and spreadsheets consume hours of staff time every single day.',
     color: '#EF4444',
   },
   {
-    icon: '💬',
+    icon: <MessageSquare size={22} color="#F59E0B" />,
     title: 'Scattered communication',
     desc: 'Important messages fragmented across WhatsApp groups, phone calls, and notice boards.',
     color: '#F59E0B',
   },
   {
-    icon: '🔀',
+    icon: <Shuffle size={22} color="#6366F1" />,
     title: 'Disconnected workflows',
     desc: 'Attendance, leave, fees and administration operate in separate systems that don\'t talk to each other.',
     color: '#6366F1',
   },
   {
-    icon: '📊',
+    icon: <BarChart3 size={22} color="#EC4899" />,
     title: 'Limited visibility',
     desc: 'School management lacks a consolidated, real-time view of daily operations and pending work.',
     color: '#EC4899',

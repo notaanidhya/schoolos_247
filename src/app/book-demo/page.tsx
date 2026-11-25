@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import { CheckCircle2, Lock } from 'lucide-react';
 import styles from './BookDemo.module.css';
 
 export default function BookDemoPage() {
@@ -147,7 +148,7 @@ export default function BookDemoPage() {
           <div className={styles.rightCol}>
             {submitted ? (
               <div className={styles.successCard}>
-                <div className={styles.successIcon}>✓</div>
+                <div className={styles.successIcon}><CheckCircle2 size={44} color="#10B981" /></div>
                 <h2 className={styles.successTitle}>Demo Request Confirmed!</h2>
                 <p className={styles.successDesc}>
                   Thank you, <strong>{formData.fullName}</strong>. We have received your demo request for{' '}
@@ -348,8 +349,8 @@ export default function BookDemoPage() {
                     {loading ? 'Submitting Request...' : 'Book Your Free Live Demo →'}
                   </button>
 
-                  <div className={styles.formFooterNotice}>
-                    🔒 Your contact information is never shared. Strict DPDP Act privacy maintained.
+                  <div className={styles.formFooterNotice} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+                    <Lock size={14} color="#64748B" /> Your contact information is never shared. Strict DPDP Act privacy maintained.
                   </div>
                 </form>
               </div>

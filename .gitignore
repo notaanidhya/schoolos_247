@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# notion extraction
+notion_raw.json
+signed_urls.json
+notion_analysis.json
+notion_images/
+notion_audit_report.html
+
+# database
+*.db
+*.db-journal
+*.db-wal
+*.db-shm

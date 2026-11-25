@@ -31,10 +31,10 @@ export default function ComparisonSection() {
           <div className={styles.table}>
             <div className={styles.tableHeader}>
               <div className={styles.colHeader}>
-                <span className={styles.colBadgeOld}>❌ Traditional approach</span>
+                <span className={styles.colBadgeOld}>Traditional approach</span>
               </div>
               <div className={styles.colHeader}>
-                <span className={styles.colBadgeNew}>✅ SchoolOS vision</span>
+                <span className={styles.colBadgeNew}>SchoolOS vision</span>
               </div>
             </div>
             {ROWS.map((row, i) => (

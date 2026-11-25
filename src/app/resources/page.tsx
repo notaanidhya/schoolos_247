@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { BookOpen } from 'lucide-react';
 import NewsletterForm from '@/components/NewsletterForm';
 import styles from './resources.module.css';
 
@@ -59,7 +60,9 @@ export default function ResourcesPage() {
                 <h2 className={styles.cardTitle}>{art.title}</h2>
                 <p className={styles.cardDesc}>{art.desc}</p>
                 <div className={styles.cardFooter}>
-                  <span className={styles.readTime}>📖 {art.readTime}</span>
+                  <span className={styles.readTime} style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                    <BookOpen size={14} /> {art.readTime}
+                  </span>
                   <Link href="/book-demo" className={styles.readLink}>
                     Learn in Demo →
                   </Link>

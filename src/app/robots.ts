@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://schoolos.in/sitemap.xml',
+    sitemap: 'https://school247.in/sitemap.xml',
   };
 }

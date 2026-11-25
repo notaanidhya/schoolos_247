@@ -57,7 +57,7 @@ export default function TermsOfServicePage() {
             <p>
               For contractual or legal queries, reach our legal team at:
               <br />
-              Email: <a href="mailto:legal@schoolos.in">legal@schoolos.in</a>
+              Email: <a href="mailto:legal@school247.in">legal@school247.in</a>
             </p>
           </div>
         </div>

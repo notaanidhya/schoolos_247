@@ -22,7 +22,7 @@ const FOOTER_LINKS = {
   Company: [
     { label: 'About Us', href: '/about' },
     { label: 'Resources', href: '/resources' },
-    { label: 'Blog', href: '/resources' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' },
     { label: 'Book a Demo', href: '/book-demo' },
@@ -52,26 +52,8 @@ export default function Footer() {
               Connecting school operations, parents and<br />
               teachers through intelligent workflows.
             </p>
-            <div className={styles.socials}>
-              <a href="#" aria-label="LinkedIn" className={styles.socialLink}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-                  <circle cx="4" cy="4" r="2"/>
-                </svg>
-              </a>
-              <a href="#" aria-label="Twitter" className={styles.socialLink}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
-                </svg>
-              </a>
-              <a href="#" aria-label="YouTube" className={styles.socialLink}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
-                </svg>
-              </a>
-            </div>
             <div className={styles.contact}>
-              <a href="mailto:hello@schoolos.in" className={styles.contactLink}>hello@schoolos.in</a>
+              <a href="mailto:hello@school247.in" className={styles.contactLink}>hello@school247.in</a>
               <span className={styles.contactSep}>·</span>
               <span className={styles.contactText}>India</span>
             </div>
@@ -100,8 +82,14 @@ export default function Footer() {
             © 2026 SchoolOS. All rights reserved. Built for schools across India.
           </p>
           <div className={styles.bottomBadge}>
-            <span className={styles.madeBadge}>
-              🇮🇳 Made in India
+            <span className={styles.madeBadge} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" style={{ borderRadius: '2px', overflow: 'hidden' }}>
+                <rect width="16" height="4" fill="#FF9933"/>
+                <rect y="4" width="16" height="4" fill="#FFFFFF"/>
+                <rect y="8" width="16" height="4" fill="#138808"/>
+                <circle cx="8" cy="6" r="1.5" stroke="#000080" strokeWidth="0.5" fill="none"/>
+              </svg>
+              Made in India
             </span>
             <span className={styles.betaBadge}>Beta</span>
           </div>

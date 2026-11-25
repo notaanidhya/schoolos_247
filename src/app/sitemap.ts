@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://schoolos.in';
+  const baseUrl = 'https://school247.in';
 
   const routes = [
     '',
@@ -21,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/security',
     '/resources',
+    '/blog',
+    '/careers',
     '/privacy-policy',
     '/terms-of-service',
     '/cookie-policy',

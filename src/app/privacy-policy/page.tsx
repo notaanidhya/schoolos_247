@@ -99,7 +99,7 @@ export default function PrivacyPolicyPage() {
               <br />
               <strong>Data Protection Officer, SchoolOS</strong>
               <br />
-              Email: <a href="mailto:privacy@schoolos.in">privacy@schoolos.in</a>
+              Email: <a href="mailto:privacy@school247.in">privacy@school247.in</a>
             </p>
           </div>
         </div>
