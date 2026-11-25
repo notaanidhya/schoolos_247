@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const FOOTER_LINKS = {
@@ -43,9 +44,17 @@ export default function Footer() {
         <div className={styles.top}>
           {/* Brand */}
           <div className={styles.brand}>
-            <Link href="/" className={styles.logo}>
-              <div className={styles.logoIcon}><span>S</span></div>
-              <span className={styles.logoText}>SchoolOS</span>
+            <Link href="/" className={`${styles.logo} ${styles.logoAnimated}`}>
+              <span className={styles.logoFrame}>
+                <Image
+                  src="/LOGO.png"
+                  alt="School247 Logo"
+                  width={220}
+                  height={56}
+                  className={styles.logoImg}
+                  priority
+                />
+              </span>
             </Link>
             <p className={styles.tagline}>
               The AI Operations Layer for Schools.<br />
