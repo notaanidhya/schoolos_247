@@ -47,12 +47,11 @@ export default function Footer() {
             <Link href="/" className={`${styles.logo} ${styles.logoAnimated}`}>
               <span className={styles.logoFrame}>
                 <Image
-                  src="/LOGO.png"
+                  src="/Logo.png"
                   alt="School247 Logo"
-                  width={220}
-                  height={56}
+                  width={200}
+                  height={50}
                   className={styles.logoImg}
-                  priority
                 />
               </span>
             </Link>
