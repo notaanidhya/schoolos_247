@@ -84,8 +84,8 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="School247 Logo"
-              width={150}
-              height={36}
+              width={220}
+              height={56}
               className={styles.logoImg}
               priority
             />
