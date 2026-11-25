@@ -52,12 +52,10 @@
   align-items: center;
   overflow: hidden;
   border-radius: var(--radius-md);
-  padding: 5px 10px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  padding: 2px 4px;
+  background: transparent;
   transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
-              filter 0.28s ease,
-              background 0.28s ease;
+              filter 0.28s ease;
 }
 
 .logoFrame::after {
@@ -80,7 +78,6 @@
 
 .logoAnimated:hover .logoFrame {
   transform: translateY(-1px) scale(1.03);
-  background: #ffffff;
   filter: drop-shadow(0 6px 16px rgba(37, 99, 235, 0.35));
 }
 
