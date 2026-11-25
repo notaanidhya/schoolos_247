@@ -82,7 +82,7 @@ export default function Navbar() {
         <Link href="/" className={`${styles.logo} ${styles.logoAnimated}`}>
           <span className={styles.logoFrame}>
             <Image
-              src="/LOGO.png"
+              src="/Logo.png"
               alt="School247 Logo"
               width={220}
               height={56}
