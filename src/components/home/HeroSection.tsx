@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { Users, CheckCircle2, CreditCard, FileText, Smartphone, ShieldCheck } from 'lucide-react';
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
@@ -85,10 +86,10 @@ export default function HeroSection() {
               {/* Stats row */}
               <div className={styles.statsRow}>
                 {[
-                  { label: 'Total Students', value: '1,247', color: '#2563EB', icon: '👨🎓' },
-                  { label: 'Present Today', value: '1,189', color: '#10B981', icon: '✅' },
-                  { label: 'Pending Fees', value: '₹2.4L', color: '#F59E0B', icon: '💰' },
-                  { label: 'Open Enquiries', value: '34', color: '#6366F1', icon: '📋' },
+                  { label: 'Student Directory', value: 'Verified Roster', color: '#2563EB', icon: <Users size={20} color="#2563EB" /> },
+                  { label: 'Attendance Sync', value: 'Live Updates', color: '#10B981', icon: <CheckCircle2 size={20} color="#10B981" /> },
+                  { label: 'Fee Management', value: 'Instant Receipts', color: '#F59E0B', icon: <CreditCard size={20} color="#F59E0B" /> },
+                  { label: 'Notice Board', value: 'Verified Circulars', color: '#6366F1', icon: <FileText size={20} color="#6366F1" /> },
                 ].map((s) => (
                   <div key={s.label} className={styles.statCard} style={{ '--stat-color': s.color } as React.CSSProperties}>
                     <div className={styles.statIcon}>{s.icon}</div>
@@ -100,10 +101,10 @@ export default function HeroSection() {
               {/* Notifications */}
               <div className={styles.notifList}>
                 {[
-                  { text: 'Rahul Sharma marked absent — Class 8A', time: '9:12 AM', type: 'warn' },
-                  { text: 'New admission enquiry from Priya Mehta', time: '8:55 AM', type: 'info' },
-                  { text: 'Fee payment received — Arjun Patel ₹12,000', time: '8:40 AM', type: 'success' },
-                  { text: 'Parent message: Exam schedule request', time: '8:30 AM', type: 'msg' },
+                  { text: 'Class 8A morning roll call marked complete', time: '9:12 AM', type: 'warn' },
+                  { text: 'New admission inquiry received for Grade 1', time: '8:55 AM', type: 'info' },
+                  { text: 'Verified circular published with read acknowledgements', time: '8:40 AM', type: 'success' },
+                  { text: 'Parent query routed to designated coordinator', time: '8:30 AM', type: 'msg' },
                 ].map((n, i) => (
                   <div key={i} className={`${styles.notif} ${styles[`notif_${n.type}`]}`}>
                     <div className={`${styles.notifDot} ${styles[`dot_${n.type}`]}`} />
@@ -119,17 +120,17 @@ export default function HeroSection() {
 
           {/* Floating cards */}
           <div className={`${styles.floatCard} ${styles.floatCard1}`}>
-            <div className={styles.floatCardIcon}>📱</div>
+            <div className={styles.floatCardIcon}><Smartphone size={22} color="#2563EB" /></div>
             <div>
-              <div className={styles.floatCardTitle}>Parent App</div>
-              <div className={styles.floatCardSub}>847 active parents</div>
+              <div className={styles.floatCardTitle}>Parent Portal</div>
+              <div className={styles.floatCardSub}>Verified announcements & notices</div>
             </div>
           </div>
           <div className={`${styles.floatCard} ${styles.floatCard2}`}>
-            <div className={styles.floatCardIcon}>🤖</div>
+            <div className={styles.floatCardIcon}><ShieldCheck size={22} color="#10B981" /></div>
             <div>
-              <div className={styles.floatCardTitle}>AI Assistant</div>
-              <div className={styles.floatCardSub}>3 tasks automated</div>
+              <div className={styles.floatCardTitle}>Institutional Control</div>
+              <div className={styles.floatCardSub}>Role-based administrative governance</div>
             </div>
           </div>
         </div>

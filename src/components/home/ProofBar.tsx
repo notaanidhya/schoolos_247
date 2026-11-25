@@ -1,21 +1,21 @@
 import styles from './ProofBar.module.css';
 
-const STATS = [
-  { value: '300+', label: 'Schools onboarding' },
-  { value: '50,000+', label: 'Students managed' },
-  { value: '1,20,000+', label: 'Parents connected' },
-  { value: '99.9%', label: 'Platform uptime' },
-  { value: '< 30s', label: 'Avg. response time' },
+const HIGHLIGHTS = [
+  { value: 'DPDP 2023', label: 'Data Privacy Compliant' },
+  { value: '100%', label: 'Isolated Tenant Records' },
+  { value: 'Verified', label: 'Official School Broadcasts' },
+  { value: 'Multi-Role', label: 'Institutional Governance' },
+  { value: 'Assisted', label: 'Onboarding & Migration' },
 ];
 
 export default function ProofBar() {
   return (
     <section className={styles.bar}>
       <div className={styles.container}>
-        <div className={styles.label}>Trusted by schools across India</div>
+        <div className={styles.label}>Built for Indian Schools</div>
         <div className={styles.divider} />
         <div className={styles.stats}>
-          {STATS.map((s) => (
+          {HIGHLIGHTS.map((s) => (
             <div key={s.label} className={styles.stat}>
               <span className={styles.value}>{s.value}</span>
               <span className={styles.statLabel}>{s.label}</span>

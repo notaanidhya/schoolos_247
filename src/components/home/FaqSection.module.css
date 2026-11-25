@@ -20,7 +20,7 @@
   background: rgba(37, 99, 235, 0.08);
   color: var(--blue);
   padding: 6px 14px;
-  border-radius: 999px;
+  border-radius: 6px;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.08em;

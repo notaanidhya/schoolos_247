@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { AlertCircle, Sparkles } from 'lucide-react';
 import styles from './audience.module.css';
 
 interface AudienceDetail {
@@ -46,9 +47,9 @@ const AUDIENCE_DATA: Record<string, AudienceDetail> = {
       },
     ],
     quote: {
-      text: 'SchoolOS gave our trust board total clarity over daily fee collections and student enrollment trends without needing to chase campus administrators for weekly reports.',
-      author: 'Trustee & Founder',
-      school: 'Heritage Academy Group (2,200 Students)',
+      text: 'Institutional trust is built upon transparency, operational discipline, and reliable data governance across every campus.',
+      author: 'Institutional Governance Standard',
+      school: 'School Board Best Practices',
     },
   },
   principals: {
@@ -82,9 +83,9 @@ const AUDIENCE_DATA: Record<string, AudienceDetail> = {
       },
     ],
     quote: {
-      text: 'Our morning coordination takes 10 minutes instead of an hour. The verified circular system restored professional boundaries with our parent community.',
-      author: 'Senior Principal',
-      school: 'St. Xavier’s High School (1,400 Students)',
+      text: 'Leadership and learning are indispensable to each other. When administrative coordination is frictionless, educators can dedicate their full energy to student excellence.',
+      author: 'Principles of Academic Leadership',
+      school: 'School Leadership Framework',
     },
   },
   administrators: {
@@ -118,9 +119,9 @@ const AUDIENCE_DATA: Record<string, AudienceDetail> = {
       },
     ],
     quote: {
-      text: 'The automated fee reminder sequence alone saved our administrative team over 25 hours every quarter and dramatically reduced awkward collection phone calls.',
-      author: 'Administrative Officer',
-      school: 'Greenfield Public School (850 Students)',
+      text: 'Streamlined administrative systems eliminate the burden of repetitive registers, creating room for meaningful human connection and student care.',
+      author: 'Administrative Excellence Guide',
+      school: 'Educational Management Series',
     },
   },
   teachers: {
@@ -154,9 +155,9 @@ const AUDIENCE_DATA: Record<string, AudienceDetail> = {
       },
     ],
     quote: {
-      text: 'Taking attendance used to be a chore. Now it takes 45 seconds on my phone. Best of all, my evenings are peaceful because parents communicate through the official app.',
-      author: 'Class 8 Coordinator & Science Faculty',
-      school: 'Delhi Valley Academy',
+      text: 'The art of teaching is the art of assisting discovery. Operational technology should empower and protect the educator’s focus, never invade it.',
+      author: 'Educator Well-Being & Classroom Focus',
+      school: 'Faculty Development Standard',
     },
   },
   parents: {
@@ -190,9 +191,9 @@ const AUDIENCE_DATA: Record<string, AudienceDetail> = {
       },
     ],
     quote: {
-      text: 'The SchoolOS app is so easy to use. I receive fee receipts instantly on WhatsApp, and I know exactly what homework my daughter has every afternoon.',
-      author: 'Parent of Class 5 Student',
-      school: 'Bright Star International School',
+      text: 'At the end of the day, the greatest key to a child’s educational journey is clear, consistent, and respectful communication between school and home.',
+      author: 'Parent-School Partnership Foundation',
+      school: 'Community Engagement Principles',
     },
   },
 };
@@ -240,7 +241,7 @@ export default async function AudiencePage({
             {/* Left: Everyday Challenges */}
             <div className={styles.challengesCard}>
               <div className={styles.colHeader}>
-                <span className={styles.colIcon}>⚠️</span>
+                <span className={styles.colIcon}><AlertCircle size={22} color="#EF4444" /></span>
                 <h3>The Challenges {data.role} Face</h3>
               </div>
               <ul className={styles.challengeList}>
@@ -256,7 +257,7 @@ export default async function AudiencePage({
             {/* Right: SchoolOS Solutions */}
             <div className={styles.solutionsCard}>
               <div className={styles.colHeader}>
-                <span className={styles.colIcon}>✨</span>
+                <span className={styles.colIcon}><Sparkles size={22} color="#2563EB" /></span>
                 <h3>How SchoolOS Solves It</h3>
               </div>
               <div className={styles.solList}>

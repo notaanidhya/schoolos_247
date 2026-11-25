@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Mail, Phone, Building2 } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import styles from './contact.module.css';
 
@@ -32,15 +33,15 @@ export default function ContactPage() {
                 <h2 className={styles.cardHeading}>Direct Communication</h2>
                 <div className={styles.channelList}>
                   <div className={styles.channelItem}>
-                    <div className={styles.channelIcon}>📧</div>
+                    <div className={styles.channelIcon}><Mail size={20} color="#2563EB" /></div>
                     <div>
                       <strong>Email Inquiries</strong>
-                      <a href="mailto:contact@schoolos.in">contact@schoolos.in</a>
+                      <a href="mailto:contact@school247.in">contact@school247.in</a>
                       <span>Responses within 4 business hours</span>
                     </div>
                   </div>
                   <div className={styles.channelItem}>
-                    <div className={styles.channelIcon}>💬</div>
+                    <div className={styles.channelIcon}><Phone size={20} color="#10B981" /></div>
                     <div>
                       <strong>WhatsApp / Phone Support</strong>
                       <span>+91 98765 43210</span>
@@ -48,7 +49,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div className={styles.channelItem}>
-                    <div className={styles.channelIcon}>🏢</div>
+                    <div className={styles.channelIcon}><Building2 size={20} color="#6366F1" /></div>
                     <div>
                       <strong>Corporate Headquarters</strong>
                       <span>Bangalore & Delhi NCR, India</span>

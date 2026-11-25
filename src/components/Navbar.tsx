@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 
@@ -26,7 +26,15 @@ const NAV_LINKS = [
     ],
   },
   { label: 'Pricing', href: '/pricing' },
-  { label: 'Resources', href: '/resources' },
+  {
+    label: 'Resources',
+    href: '/resources',
+    children: [
+      { label: 'Guides & Playbooks', href: '/resources' },
+      { label: 'School Leadership Blog', href: '/blog' },
+      { label: 'Careers', href: '/careers' },
+    ],
+  },
   { label: 'About', href: '/about' },
 ];
 
@@ -34,12 +42,37 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  const handleMouseEnter = (label: string) => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setOpenDropdown(label);
+  };
+
+  const handleMouseLeave = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 200);
+  };
+
+  const toggleDropdown = (label: string, e: React.MouseEvent) => {
+    if (window.innerWidth >= 1024) {
+      e.preventDefault();
+      if (openDropdown === label) {
+        setOpenDropdown(null);
+      } else {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        setOpenDropdown(label);
+      }
+    }
+  };
 
   return (
     <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
@@ -58,12 +91,13 @@ export default function Navbar() {
             <div
               key={link.label}
               className={styles.navItem}
-              onMouseEnter={() => link.children && setOpenDropdown(link.label)}
-              onMouseLeave={() => setOpenDropdown(null)}
+              onMouseEnter={() => link.children && handleMouseEnter(link.label)}
+              onMouseLeave={() => link.children && handleMouseLeave()}
             >
               <Link
                 href={link.href}
                 className={`${styles.navLink} ${openDropdown === link.label ? styles.navLinkActive : ''}`}
+                onClick={(e) => link.children && toggleDropdown(link.label, e)}
               >
                 {link.label}
                 {link.children && (
@@ -73,9 +107,18 @@ export default function Navbar() {
                 )}
               </Link>
               {link.children && openDropdown === link.label && (
-                <div className={styles.dropdown}>
+                <div
+                  className={styles.dropdown}
+                  onMouseEnter={() => handleMouseEnter(link.label)}
+                  onMouseLeave={() => handleMouseLeave()}
+                >
                   {link.children.map((child) => (
-                    <Link key={child.label} href={child.href} className={styles.dropdownItem}>
+                    <Link
+                      key={child.label}
+                      href={child.href}
+                      className={styles.dropdownItem}
+                      onClick={() => setOpenDropdown(null)}
+                    >
                       {child.label}
                     </Link>
                   ))}

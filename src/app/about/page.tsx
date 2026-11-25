@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { ShieldCheck, Zap, Users } from 'lucide-react';
 import styles from './about.module.css';
 
 export const metadata: Metadata = {
@@ -52,7 +53,7 @@ export default function AboutPage() {
 
           <div className={styles.valuesGrid}>
             <div className={styles.valCard}>
-              <div className={styles.valIcon}>🛡️</div>
+              <div className={styles.valIcon}><ShieldCheck size={26} color="#2563EB" /></div>
               <h3>Privacy by Design</h3>
               <p>
                 We treat student and parent data with utmost sanctity. We strictly adhere to India’s DPDP framework
@@ -60,14 +61,14 @@ export default function AboutPage() {
               </p>
             </div>
             <div className={styles.valCard}>
-              <div className={styles.valIcon}>⚡</div>
+              <div className={styles.valIcon}><Zap size={26} color="#F59E0B" /></div>
               <h3>Teacher Ergonomics</h3>
               <p>
                 If a feature takes more than 60 seconds of a teacher’s time, we redesign it. Faculty should teach, not do data entry.
               </p>
             </div>
             <div className={styles.valCard}>
-              <div className={styles.valIcon}>🤝</div>
+              <div className={styles.valIcon}><Users size={26} color="#10B981" /></div>
               <h3>Respectful Coexistence</h3>
               <p>
                 We never force schools to rip-and-replace trusted systems. We connect disparate workflows and elevate them.

@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { CheckCircle2 } from 'lucide-react';
 import styles from '@/app/contact/contact.module.css';
 
 export default function ContactForm() {
@@ -8,7 +9,9 @@ export default function ContactForm() {
   if (sent) {
     return (
       <div style={{ textAlign: 'center', padding: '30px 10px' }}>
-        <div style={{ fontSize: '2rem', marginBottom: '12px' }}>✅</div>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '12px' }}>
+          <CheckCircle2 size={44} color="#10B981" />
+        </div>
         <h3 style={{ color: 'var(--navy)', marginBottom: '8px' }}>Message Received!</h3>
         <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>
           Thank you for reaching out. A SchoolOS educational representative will respond within 4 business hours.

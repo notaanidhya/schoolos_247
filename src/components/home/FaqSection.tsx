@@ -19,7 +19,7 @@ const FAQS: FaqItem[] = [
   },
   {
     q: 'How will parents download and use the app? What if some parents do not have smartphones?',
-    a: 'Parents receive a secure, 1-tap activation SMS with their child’s profile pre-linked. The app is free on Android and iOS. For parents who do not use smartphones or lack internet access, SchoolOS automatically falls back to standard SMS and WhatsApp notifications for critical alerts such as unexcused absences and emergency circulars.',
+    a: 'Parents receive a secure, 1-tap activation SMS with their child’s profile pre-linked. The app is free on Android and accessible via modern web browsers. For parents who do not use smartphones or lack internet access, SchoolOS automatically falls back to standard SMS and WhatsApp notifications for critical alerts such as unexcused absences and emergency circulars.',
   },
   {
     q: 'How does SchoolOS protect sensitive student and guardian data?',

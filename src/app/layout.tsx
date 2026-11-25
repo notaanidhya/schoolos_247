@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://schoolos.in"),
+  metadataBase: new URL("https://school247.in"),
   title: {
     default: "SchoolOS — The AI Operations Layer for Schools",
     template: "%s | SchoolOS",
@@ -20,13 +20,14 @@ export const metadata: Metadata = {
     "AI school management",
     "school SaaS India",
     "SchoolOS",
+    "School247",
   ],
   authors: [{ name: "SchoolOS" }],
   creator: "SchoolOS",
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://schoolos.in",
+    url: "https://school247.in",
     siteName: "SchoolOS",
     title: "SchoolOS — The AI Operations Layer for Schools",
     description:
@@ -80,14 +81,14 @@ export default function RootLayout({
               name: "SchoolOS",
               description:
                 "The AI Operations Layer for Schools — connecting school operations, parents and teachers through intelligent workflows.",
-              url: "https://schoolos.in",
+              url: "https://school247.in",
               applicationCategory: "BusinessApplication",
-              operatingSystem: "Web, iOS, Android",
+              operatingSystem: "Web, Android",
               offers: { "@type": "Offer", price: "0", priceCurrency: "INR" },
               provider: {
                 "@type": "Organization",
                 name: "SchoolOS",
-                url: "https://schoolos.in",
+                url: "https://school247.in",
               },
             }),
           }}

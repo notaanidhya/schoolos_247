@@ -52,7 +52,7 @@
   color: #EF4444;
   background: #FEF2F2;
   padding: 4px 14px;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
 }
 
 .colBadgeNew {
@@ -62,7 +62,7 @@
   color: var(--green);
   background: var(--green-50);
   padding: 4px 14px;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
 }
 
 .row {

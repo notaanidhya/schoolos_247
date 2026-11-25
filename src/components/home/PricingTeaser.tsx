@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { Users, Building2, Layers, ArrowUpRight } from 'lucide-react';
 import styles from './PricingTeaser.module.css';
 
 const TIERS = [
@@ -11,7 +12,7 @@ const TIERS = [
     features: [
       'Core Student & Staff Information Directory',
       'Daily 1-tap Attendance & Leave Tracking',
-      'Parent Mobile App (Android & iOS)',
+      'Parent Mobile App (Android & Web Portal)',
       'Digital Circulars & Announcements Hub',
       'Role-based Administrator & Teacher access',
       'Standard email & ticketing support',
@@ -127,28 +128,28 @@ export default function PricingTeaser() {
           </div>
           <div className={styles.factorsGrid}>
             <div className={styles.factorItem}>
-              <div className={styles.factorIcon}>👥</div>
+              <div className={styles.factorIcon}><Users size={20} color="#2563EB" /></div>
               <div className={styles.factorText}>
                 <strong>Student Strength</strong>
                 <span>Pay proportional to active student enrollment</span>
               </div>
             </div>
             <div className={styles.factorItem}>
-              <div className={styles.factorIcon}>🏫</div>
+              <div className={styles.factorIcon}><Building2 size={20} color="#10B981" /></div>
               <div className={styles.factorText}>
                 <strong>Number of Campuses</strong>
                 <span>Single school or multi-branch educational trust</span>
               </div>
             </div>
             <div className={styles.factorItem}>
-              <div className={styles.factorIcon}>🧩</div>
+              <div className={styles.factorIcon}><Layers size={20} color="#6366F1" /></div>
               <div className={styles.factorText}>
                 <strong>Selected Modules</strong>
                 <span>Choose only the modules your staff actually uses</span>
               </div>
             </div>
             <div className={styles.factorItem}>
-              <div className={styles.factorIcon}>🚀</div>
+              <div className={styles.factorIcon}><ArrowUpRight size={20} color="#F59E0B" /></div>
               <div className={styles.factorText}>
                 <strong>Data Migration Needs</strong>
                 <span>Assistance transferring from legacy spreadsheets or ERPs</span>

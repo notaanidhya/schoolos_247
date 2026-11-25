@@ -53,7 +53,7 @@ export default function IntegrationsPage() {
       category: 'Mobile Notification Infrastructure',
       desc: 'High-reliability, sub-second push notification delivery for critical homework releases, exam alerts, and emergency announcements.',
       capabilities: [
-        'Instant background push notifications to iOS and Android devices',
+        'Instant background push notifications to Android devices and web portal',
         'Class and section targeted notification channels',
         'Delivery and open rate telemetry for administrative verification',
       ],

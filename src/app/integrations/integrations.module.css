@@ -22,7 +22,7 @@
   border: 1px solid rgba(59, 130, 246, 0.3);
   color: #93c5fd;
   padding: 6px 14px;
-  border-radius: 999px;
+  border-radius: 6px;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -106,7 +106,7 @@
   font-size: 0.72rem;
   font-weight: 700;
   padding: 3px 8px;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid rgba(245, 158, 11, 0.3);
 }
 

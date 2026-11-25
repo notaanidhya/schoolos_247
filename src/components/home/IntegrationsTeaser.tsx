@@ -1,14 +1,15 @@
-import AnimateOnScroll from '@/components/AnimateOnScroll';
 import Link from 'next/link';
+import { MessageSquare, Mail, CreditCard, Bell, FileSpreadsheet, Video } from 'lucide-react';
+import AnimateOnScroll from '@/components/AnimateOnScroll';
 import styles from './IntegrationsTeaser.module.css';
 
 const INTEGRATIONS = [
-  { name: 'WhatsApp', desc: 'Parent notifications and communication', emoji: '💬', color: '#25D366' },
-  { name: 'Google Workspace', desc: 'Email, calendars and documents', emoji: '📧', color: '#4285F4' },
-  { name: 'Razorpay', desc: 'Fee payment processing', emoji: '💳', color: '#3395FF' },
-  { name: 'Firebase', desc: 'Push notification infrastructure', emoji: '🔔', color: '#FFCA28' },
-  { name: 'Tally / ERP', desc: 'Finance and accounting integration', emoji: '📒', color: '#10B981' },
-  { name: 'Google Meet', desc: 'Virtual parent-teacher meetings', emoji: '🎥', color: '#00897B' },
+  { name: 'WhatsApp', desc: 'Parent notifications and communication', icon: <MessageSquare size={20} color="#25D366" />, color: '#25D366' },
+  { name: 'Google Workspace', desc: 'Email, calendars and documents', icon: <Mail size={20} color="#4285F4" />, color: '#4285F4' },
+  { name: 'Razorpay', desc: 'Fee payment processing', icon: <CreditCard size={20} color="#3395FF" />, color: '#3395FF' },
+  { name: 'Firebase', desc: 'Push notification infrastructure', icon: <Bell size={20} color="#FFCA28" />, color: '#FFCA28' },
+  { name: 'Tally / ERP', desc: 'Finance and accounting integration', icon: <FileSpreadsheet size={20} color="#10B981" />, color: '#10B981' },
+  { name: 'Google Meet', desc: 'Virtual parent-teacher meetings', icon: <Video size={20} color="#00897B" />, color: '#00897B' },
 ];
 
 export default function IntegrationsTeaser() {
@@ -34,7 +35,7 @@ export default function IntegrationsTeaser() {
             <AnimateOnScroll key={item.name} delay={i * 80}>
               <div className={styles.card}>
                 <div className={styles.iconWrap} style={{ '--int-color': item.color } as React.CSSProperties}>
-                  <span className={styles.emoji}>{item.emoji}</span>
+                  {item.icon}
                 </div>
                 <div className={styles.info}>
                   <div className={styles.name}>{item.name}</div>

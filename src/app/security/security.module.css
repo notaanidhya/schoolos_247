@@ -22,7 +22,7 @@
   border: 1px solid rgba(59, 130, 246, 0.3);
   color: #93c5fd;
   padding: 6px 14px;
-  border-radius: 999px;
+  border-radius: 6px;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -65,8 +65,15 @@
 }
 
 .pillarIcon {
-  font-size: 2rem;
-  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--blue-50);
+  color: var(--blue);
+  margin-bottom: 16px;
 }
 
 .pillarTitle {

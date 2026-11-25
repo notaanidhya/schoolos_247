@@ -79,7 +79,7 @@ export default function PlatformPage() {
                 parents track fees and homework; administrators manage operations from a unified console.
               </p>
               <div className={styles.layerPills}>
-                <span>Parent Mobile App (iOS & Android)</span>
+                <span>Parent Mobile App (Android & Web)</span>
                 <span>Teacher Quick-Roll Console</span>
                 <span>Administrator Command Hub</span>
                 <span>Trustee Executive Dashboard</span>

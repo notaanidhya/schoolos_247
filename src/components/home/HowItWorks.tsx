@@ -1,3 +1,4 @@
+import { Building2, Users, Sparkles } from 'lucide-react';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import styles from './HowItWorks.module.css';
 
@@ -6,21 +7,21 @@ const STEPS = [
     num: '01',
     title: 'Connect your school',
     desc: 'Set up school information, classes, staff, roles and workflows. Existing system integrations can be configured where supported.',
-    icon: '🏫',
+    icon: <Building2 size={24} color="#2563EB" />,
     color: '#2563EB',
   },
   {
     num: '02',
     title: 'Bring everyone together',
     desc: 'Connect administrators, teachers and parents through structured workflows, communication channels and digital requests.',
-    icon: '🤝',
+    icon: <Users size={24} color="#10B981" />,
     color: '#10B981',
   },
   {
     num: '03',
     title: 'Automate and improve',
     desc: 'Introduce workflow automation, notifications and AI assistance with appropriate human approvals at every step.',
-    icon: '⚡',
+    icon: <Sparkles size={24} color="#6366F1" />,
     color: '#6366F1',
   },
 ];

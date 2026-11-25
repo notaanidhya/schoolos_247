@@ -59,7 +59,7 @@ const MODULE_LIST = [
     id: 'parent-mobile-app',
     title: 'Parent Mobile Application',
     tagline: 'A modern, verified smartphone portal for your school community',
-    desc: 'Build lasting parent trust. Put homework, fee receipts, exam timetables, attendance history, and teacher query windows directly in parents’ hands on iOS and Android.',
+    desc: 'Build lasting parent trust. Put homework, fee receipts, exam timetables, attendance history, and teacher query windows directly in parents’ hands on Android and web portal.',
     items: [
       'Secure parent-student pairing via phone number verification',
       'Daily homework board with teacher instructions and reference attachments',
@@ -147,6 +147,20 @@ export default function FeaturesPage() {
 
       <section className={styles.featuresSection}>
         <div className={styles.container}>
+          {/* Quick jump module navigation */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', marginBottom: '40px' }}>
+            {MODULE_LIST.map((m) => (
+              <a
+                key={m.id}
+                href={`#${m.id}`}
+                className="btn btn-secondary btn--sm"
+                style={{ fontSize: '0.82rem', padding: '6px 14px' }}
+              >
+                {m.title.split('&')[0].trim()}
+              </a>
+            ))}
+          </div>
+
           <div className={styles.moduleGrid}>
             {MODULE_LIST.map((mod) => (
               <div key={mod.id} id={mod.id} className={styles.moduleCard}>
@@ -168,7 +182,7 @@ export default function FeaturesPage() {
                   ))}
                 </ul>
                 <div className={styles.cardFooter}>
-                  <Link href={`/book-demo?module=${mod.id}`} className="btn btn-outline">
+                  <Link href={`/book-demo?module=${mod.id}`} className="btn btn-secondary">
                     Schedule Demo for this Module →
                   </Link>
                 </div>

@@ -1,34 +1,40 @@
+import Link from 'next/link';
+import { Building2, Users, Bot, BarChart3, ArrowRight } from 'lucide-react';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import styles from './SolutionSection.module.css';
 
 const PILLARS = [
   {
-    icon: '🏫',
+    icon: <Building2 size={24} color="#2563EB" />,
     title: 'School Operations',
     desc: 'Manage attendance, students, staff, admissions, fees and administrative workflows from one central hub.',
     color: '#2563EB',
+    href: '/features#school-administration',
     features: ['Student & staff records', 'Attendance management', 'Fee tracking', 'Admissions pipeline'],
   },
   {
-    icon: '🤝',
+    icon: <Users size={24} color="#10B981" />,
     title: 'Parent & Teacher Experience',
     desc: 'Connect parents and teachers through updates, conversations, digital requests and approvals.',
     color: '#10B981',
+    href: '/features#parent-mobile-app',
     features: ['Parent mobile app', 'Teacher portal', 'Digital notices', 'Read acknowledgements'],
   },
   {
-    icon: '🤖',
+    icon: <Bot size={24} color="#6366F1" />,
     title: 'AI Operations Assistant',
     desc: 'Assist with repetitive workflows, information retrieval and administrative tasks — with human oversight.',
     color: '#6366F1',
+    href: '/features#ai-operations',
     features: ['Automated reminders', 'Natural language queries', 'Document search', 'Workflow assistance'],
     badge: 'Coming Soon',
   },
   {
-    icon: '📊',
+    icon: <BarChart3 size={24} color="#F59E0B" />,
     title: 'Management Intelligence',
     desc: 'Give school leadership better visibility into operations, pending work and performance insights.',
     color: '#F59E0B',
+    href: '/features#school-administration',
     features: ['Operations dashboard', 'Pending work overview', 'Attendance reports', 'Admission pipeline view'],
   },
 ];
@@ -72,6 +78,9 @@ export default function SolutionSection() {
                     </li>
                   ))}
                 </ul>
+                <Link href={p.href} style={{ marginTop: 'auto', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.875rem', fontWeight: 600, color: p.color, textDecoration: 'none' }}>
+                  Explore module features <ArrowRight size={14} />
+                </Link>
               </div>
             </AnimateOnScroll>
           ))}
