@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Users, CheckCircle2, CreditCard, FileText, Smartphone, ShieldCheck } from 'lucide-react';
 import styles from './HeroSection.module.css';
 
@@ -81,8 +82,39 @@ export default function HeroSection() {
               </div>
               <div className={styles.mockupTitle}>SchoolOS Dashboard</div>
             </div>
+
             {/* Mockup content */}
             <div className={styles.mockupBody}>
+              {/* Visual highlights: Teacher & School Campus */}
+              <div className={styles.showcaseTop}>
+                <div className={styles.mediaCard}>
+                  <Image
+                    src="/images/hero-teacher.jpg"
+                    alt="Teacher guiding students in classroom"
+                    width={420}
+                    height={220}
+                    className={styles.mediaImg}
+                    priority
+                  />
+                  <div className={styles.mediaCaption}>
+                    <span>Classroom & Roll Call</span>
+                  </div>
+                </div>
+
+                <div className={styles.mediaCard}>
+                  <Image
+                    src="/images/hero-school.jpg"
+                    alt="Indian school campus with students"
+                    width={420}
+                    height={220}
+                    className={styles.mediaImg}
+                  />
+                  <div className={styles.mediaCaption}>
+                    <span>Campus Operations</span>
+                  </div>
+                </div>
+              </div>
+
               {/* Stats row */}
               <div className={styles.statsRow}>
                 {[
@@ -98,6 +130,7 @@ export default function HeroSection() {
                   </div>
                 ))}
               </div>
+
               {/* Notifications */}
               <div className={styles.notifList}>
                 {[
@@ -120,6 +153,13 @@ export default function HeroSection() {
 
           {/* Floating cards */}
           <div className={`${styles.floatCard} ${styles.floatCard1}`}>
+            <Image
+              src="/images/hero-parent.jpg"
+              alt="Parent checking school notices on phone"
+              width={44}
+              height={44}
+              className={styles.floatAvatar}
+            />
             <div className={styles.floatCardIcon}><Smartphone size={22} color="#2563EB" /></div>
             <div>
               <div className={styles.floatCardTitle}>Parent Portal</div>
