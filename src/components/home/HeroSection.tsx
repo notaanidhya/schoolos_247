@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Users, CheckCircle2, CreditCard, FileText, Smartphone, ShieldCheck } from 'lucide-react';
+import { Users, CheckCircle2, CreditCard, FileText, ShieldCheck } from 'lucide-react';
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
@@ -17,7 +17,7 @@ export default function HeroSection() {
           {/* Badge */}
           <div className={styles.badge}>
             <span className={styles.badgeDot} />
-            <span>Introducing SchoolOS for Indian Schools</span>
+            <span>Introducing School247 for Indian Schools</span>
           </div>
 
           {/* Headline */}
@@ -80,7 +80,7 @@ export default function HeroSection() {
                 <span className={`${styles.dot} ${styles.dotYellow}`} />
                 <span className={`${styles.dot} ${styles.dotGreen}`} />
               </div>
-              <div className={styles.mockupTitle}>SchoolOS Dashboard</div>
+              <div className={styles.mockupTitle}>SCHOOL247 DASHBOARD</div>
             </div>
 
             {/* Mockup content */}
@@ -91,8 +91,8 @@ export default function HeroSection() {
                   <Image
                     src="/images/hero-teacher.jpg"
                     alt="Teacher guiding students in classroom"
-                    width={420}
-                    height={220}
+                    width={360}
+                    height={140}
                     className={styles.mediaImg}
                     priority
                   />
@@ -105,8 +105,8 @@ export default function HeroSection() {
                   <Image
                     src="/images/hero-school.jpg"
                     alt="Indian school campus with students"
-                    width={420}
-                    height={220}
+                    width={360}
+                    height={140}
                     className={styles.mediaImg}
                   />
                   <div className={styles.mediaCaption}>
@@ -151,7 +151,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Floating cards */}
+          {/* Floating Parent Portal card with parent photo */}
           <div className={`${styles.floatCard} ${styles.floatCard1}`}>
             <Image
               src="/images/hero-parent.jpg"
@@ -160,12 +160,13 @@ export default function HeroSection() {
               height={44}
               className={styles.floatAvatar}
             />
-            <div className={styles.floatCardIcon}><Smartphone size={22} color="#2563EB" /></div>
             <div>
               <div className={styles.floatCardTitle}>Parent Portal</div>
               <div className={styles.floatCardSub}>Verified announcements & notices</div>
             </div>
           </div>
+
+          {/* Floating Institutional Control card */}
           <div className={`${styles.floatCard} ${styles.floatCard2}`}>
             <div className={styles.floatCardIcon}><ShieldCheck size={22} color="#10B981" /></div>
             <div>
