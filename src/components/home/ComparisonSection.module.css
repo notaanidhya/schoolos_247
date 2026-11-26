@@ -1,4 +1,4 @@
-.section { background: white; }
+.section { background: var(--surface); }
 
 .header {
   text-align: center;
@@ -51,8 +51,8 @@
   font-family: var(--font-display);
   color: #EF4444;
   background: #FEF2F2;
-  padding: 4px 14px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: 4px;
 }
 
 .colBadgeNew {
@@ -61,8 +61,8 @@
   font-family: var(--font-display);
   color: var(--green);
   background: var(--green-50);
-  padding: 4px 14px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: 4px;
 }
 
 .row {

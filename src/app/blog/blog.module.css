@@ -26,8 +26,8 @@
   color: var(--blue-light);
   background: rgba(37, 99, 235, 0.15);
   border: 1px solid rgba(37, 99, 235, 0.3);
-  padding: 4px 12px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: 4px;
   margin-bottom: 20px;
 }
 
@@ -72,7 +72,7 @@
   color: var(--blue);
   background: var(--blue-50);
   padding: 4px 10px;
-  border-radius: 6px;
+  border-radius: 4px;
   width: fit-content;
 }
 

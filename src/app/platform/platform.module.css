@@ -23,8 +23,8 @@
   background: rgba(37, 99, 235, 0.2);
   border: 1px solid rgba(59, 130, 246, 0.3);
   color: #93c5fd;
-  padding: 6px 16px;
-  border-radius: 6px;
+  padding: 5px 12px;
+  border-radius: 4px;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -44,6 +44,7 @@
   line-height: 1.2;
   max-width: 900px;
   margin: 0 auto 20px;
+  color: #ffffff;
 }
 
 .heroSub {
@@ -134,7 +135,7 @@
   color: var(--blue);
   background: rgba(37, 99, 235, 0.1);
   padding: 4px 10px;
-  border-radius: 6px;
+  border-radius: 4px;
   text-transform: uppercase;
 }
 
@@ -150,7 +151,7 @@
   font-size: 0.7rem;
   font-weight: 700;
   padding: 3px 8px;
-  border-radius: 6px;
+  border-radius: 4px;
   text-transform: uppercase;
 }
 
@@ -172,7 +173,7 @@
   border: 1px solid rgba(15, 23, 42, 0.08);
   color: var(--text);
   padding: 6px 14px;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 0.85rem;
   font-weight: 600;
 }
@@ -193,7 +194,7 @@
   background: rgba(255, 255, 255, 0.12);
   color: #93c5fd;
   padding: 4px 12px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -203,6 +204,7 @@
 .coexistenceTitle {
   font-size: 2.2rem;
   font-weight: 800;
+  color: #ffffff;
   margin-bottom: 16px;
   line-height: 1.3;
 }

@@ -14,7 +14,7 @@
   right: -100px;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -24,7 +24,7 @@
   left: -100px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(79,70,229,0.09) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -77,8 +77,8 @@
   background: rgba(37,99,235,0.15);
   border: 1px solid rgba(37,99,235,0.3);
   color: rgba(255,255,255,0.9);
-  padding: 6px 16px;
-  border-radius: 6px;
+  padding: 4px 12px;
+  border-radius: 4px;
   font-size: var(--text-sm);
   font-weight: 600;
   font-family: var(--font-display);
@@ -90,7 +90,7 @@
   height: 8px;
   background: var(--green);
   border-radius: 50%;
-  animation: pulse-ring 1.5s infinite;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
   flex-shrink: 0;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .headlineGradient {
-  background: linear-gradient(135deg, #60A5FA 0%, #A78BFA 50%, #34D399 100%);
+  background: linear-gradient(135deg, #60A5FA 0%, #818CF8 50%, #93C5FD 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -185,10 +185,10 @@
 }
 
 .mockupDots { display: flex; gap: 6px; }
-.dot { width: 10px; height: 10px; border-radius: 50%; }
-.dotRed    { background: #FF5F57; }
-.dotYellow { background: #FFBD2E; }
-.dotGreen  { background: #28C840; }
+.dot { width: 9px; height: 9px; border-radius: 50%; opacity: 0.65; }
+.dotRed    { background: #ef4444; }
+.dotYellow { background: #f59e0b; }
+.dotGreen  { background: #10b981; }
 
 .mockupTitle {
   font-size: var(--text-xs);

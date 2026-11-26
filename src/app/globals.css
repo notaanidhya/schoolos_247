@@ -77,12 +77,12 @@
   --shadow-navy:0 20px 60px rgba(16,28,54,0.4);
 
   /* Border Radius */
-  --radius-sm:  0.375rem;
+  --radius-sm:  0.25rem;
   --radius:     0.5rem;
-  --radius-md:  0.75rem;
-  --radius-lg:  1rem;
-  --radius-xl:  1.5rem;
-  --radius-2xl: 2rem;
+  --radius-md:  0.625rem;
+  --radius-lg:  0.75rem;
+  --radius-xl:  1rem;
+  --radius-2xl: 1.25rem;
   --radius-full:9999px;
 
   /* Transitions */
@@ -112,7 +112,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--text-base);
   color: var(--text);
-  background: var(--white);
+  background: var(--surface);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -144,6 +144,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
   color: var(--text);
+}
+
+/* Headings and titles on dark backgrounds - ensure high contrast white text */
+.bg-navy h1, .bg-navy h2, .bg-navy h3, .bg-navy h4, .bg-navy h5, .bg-navy h6,
+.card--navy h1, .card--navy h2, .card--navy h3, .card--navy h4, .card--navy h5, .card--navy h6,
+.card--gradient h1, .card--gradient h2, .card--gradient h3, .card--gradient h4,
+.gradient-bg-hero h1, .gradient-bg-hero h2, .gradient-bg-hero h3, .gradient-bg-hero h4,
+[class*="hero"] h1, [class*="hero"] h2, [class*="hero"] h3, [class*="hero"] h4,
+[class*="hero"] [class*="headline"], [class*="hero"] [class*="title"], [class*="hero"] [class*="Title"],
+[data-dark="true"] h1, [data-dark="true"] h2, [data-dark="true"] h3 {
+  color: var(--white);
 }
 
 .display-xl {
@@ -226,7 +237,10 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--space-2);
   font-family: var(--font-display);
   font-weight: 600;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-base);
+  line-height: 1.5;
   transition: all var(--transition);
   text-decoration: none;
   cursor: pointer;
@@ -237,26 +251,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn--sm {
   font-size: var(--text-sm);
-  padding: var(--space-2) var(--space-5);
+  padding: var(--space-2) var(--space-4);
   height: 36px;
+  border-radius: var(--radius-sm);
 }
 
 .btn--md {
   font-size: var(--text-base);
   padding: var(--space-3) var(--space-6);
   height: 44px;
+  border-radius: var(--radius);
 }
 
 .btn--lg {
   font-size: var(--text-lg);
-  padding: var(--space-4) var(--space-8);
-  height: 56px;
+  padding: var(--space-3) var(--space-8);
+  height: 50px;
+  border-radius: var(--radius);
 }
 
 .btn--xl {
   font-size: var(--text-xl);
-  padding: var(--space-5) var(--space-10);
-  height: 64px;
+  padding: var(--space-4) var(--space-10);
+  height: 56px;
+  border-radius: var(--radius-md);
 }
 
 .btn-primary {
@@ -328,8 +346,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: var(--text-xs);
   font-weight: 600;
   font-family: var(--font-display);
-  padding: 3px 10px;
-  border-radius: 6px;
+  padding: 3px 8px;
+  border-radius: 4px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -438,17 +456,18 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-12px); }
+  50%       { transform: translateY(-4px); }
 }
 
 @keyframes floatSlow {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50%       { transform: translateY(-8px) rotate(2deg); }
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-3px); }
 }
 
 @keyframes pulse-ring {
-  0%   { transform: scale(1); opacity: 0.8; }
-  100% { transform: scale(1.4); opacity: 0; }
+  0%   { transform: scale(1); opacity: 0.6; }
+  50%  { transform: scale(1.15); opacity: 0.2; }
+  100% { transform: scale(1); opacity: 0.6; }
 }
 
 @keyframes shimmer {

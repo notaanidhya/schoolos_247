@@ -108,10 +108,10 @@ export default function SecurityPage() {
               Processing Agreement outlining all technical safeguards.
             </p>
             <div className={styles.actionRow}>
-              <Link href="/privacy-policy" className="btn btn-secondary">
+              <Link href="/privacy-policy" className="btn btn-secondary btn--md">
                 Read Full Privacy Policy →
               </Link>
-              <Link href="/book-demo" className="btn btn-primary">
+              <Link href="/book-demo" className="btn btn-primary btn--md">
                 Schedule a Security & Architecture Review
               </Link>
             </div>

@@ -94,7 +94,7 @@
 
 .filterBtn {
   padding: 6px 14px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--muted);
@@ -155,8 +155,8 @@
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 6px;
+  padding: 3px 8px;
+  border-radius: 4px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
