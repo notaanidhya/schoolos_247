@@ -148,17 +148,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Headings and titles on dark backgrounds - ensure high contrast white text */
+/* Uses !important to beat CSS module specificity when globals.css loads after module CSS */
 .bg-navy h1, .bg-navy h2, .bg-navy h3, .bg-navy h4, .bg-navy h5, .bg-navy h6,
 .card--navy h1, .card--navy h2, .card--navy h3, .card--navy h4, .card--navy h5, .card--navy h6,
 .card--gradient h1, .card--gradient h2, .card--gradient h3, .card--gradient h4,
 .gradient-bg-hero h1, .gradient-bg-hero h2, .gradient-bg-hero h3, .gradient-bg-hero h4,
-[class*="hero"]:not([class*="card"]):not([class*="floatCard"]) > h1,
-[class*="hero"]:not([class*="card"]):not([class*="floatCard"]) > h2,
-[class*="hero"]:not([class*="card"]):not([class*="floatCard"]) > h3,
+[data-dark="true"] h1, [data-dark="true"] h2, [data-dark="true"] h3 {
+  color: var(--white) !important;
+}
+
+/* Hero sections — covers direct children AND deeply nested headings inside .container wrappers */
+[class*="hero"]:not([class*="card"]):not([class*="floatCard"]) h1,
+[class*="hero"]:not([class*="card"]):not([class*="floatCard"]) h2,
+[class*="hero"]:not([class*="card"]):not([class*="floatCard"]) h3,
 [class*="hero"] [class*="heroTitle"],
 [class*="hero"] [class*="heroHeadline"],
-[data-dark="true"] h1, [data-dark="true"] h2, [data-dark="true"] h3 {
-  color: var(--white);
+[class*="hero"] [class*="headline"],
+[class*="hero"] [class*="title"]:not([class*="floatCard"]):not([class*="pillar"]):not([class*="module"]) {
+  color: var(--white) !important;
+}
+
+/* Paragraph/subtext inside dark hero sections */
+[class*="hero"]:not([class*="card"]):not([class*="floatCard"]) [class*="sub"],
+[class*="hero"]:not([class*="card"]):not([class*="floatCard"]) [class*="heroSub"],
+[class*="hero"]:not([class*="card"]):not([class*="floatCard"]) [class*="tagline"] {
+  color: #cbd5e1 !important;
 }
 
 /* Explicit rule: Any floating card or light card inside hero always keeps dark text */
