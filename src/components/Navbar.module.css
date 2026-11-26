@@ -40,6 +40,79 @@
   flex-shrink: 0;
 }
 
+.logoAnimated {
+  display: inline-flex;
+  align-items: center;
+  animation: logoEntrance 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.logoFrame {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  padding: 2px 4px;
+  background: transparent;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.28s ease;
+}
+
+.logoFrame::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.logoAnimated:hover .logoFrame {
+  transform: translateY(-1px) scale(1.03);
+  filter: drop-shadow(0 6px 16px rgba(37, 99, 235, 0.35));
+}
+
+.logoAnimated:hover .logoFrame::after {
+  left: 130%;
+}
+
+.logoImg {
+  display: block;
+  height: 44px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+}
+
+@keyframes logoEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logoAnimated,
+  .logoFrame,
+  .logoFrame::after {
+    animation: none;
+    transition: none;
+  }
+}
+
 .logoIcon {
   width: 38px;
   height: 38px;

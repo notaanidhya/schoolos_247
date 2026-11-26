@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
-import { Users, CheckCircle2, CreditCard, FileText, Smartphone, ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
+import { Users, CheckCircle2, CreditCard, FileText, ShieldCheck } from 'lucide-react';
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
@@ -81,8 +82,39 @@ export default function HeroSection() {
               </div>
               <div className={styles.mockupTitle}>School247 Dashboard</div>
             </div>
+
             {/* Mockup content */}
             <div className={styles.mockupBody}>
+              {/* Visual highlights: Teacher & School Campus */}
+              <div className={styles.showcaseTop}>
+                <div className={styles.mediaCard}>
+                  <Image
+                    src="/images/hero-teacher.jpg"
+                    alt="Teacher guiding students in classroom"
+                    width={360}
+                    height={140}
+                    className={styles.mediaImg}
+                    priority
+                  />
+                  <div className={styles.mediaCaption}>
+                    <span>Classroom & Roll Call</span>
+                  </div>
+                </div>
+
+                <div className={styles.mediaCard}>
+                  <Image
+                    src="/images/hero-school.jpg"
+                    alt="Indian school campus with students"
+                    width={360}
+                    height={140}
+                    className={styles.mediaImg}
+                  />
+                  <div className={styles.mediaCaption}>
+                    <span>Campus Operations</span>
+                  </div>
+                </div>
+              </div>
+
               {/* Stats row */}
               <div className={styles.statsRow}>
                 {[
@@ -98,6 +130,7 @@ export default function HeroSection() {
                   </div>
                 ))}
               </div>
+
               {/* Notifications */}
               <div className={styles.notifList}>
                 {[
@@ -118,14 +151,22 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Floating cards */}
+          {/* Floating Parent Portal card with parent photo */}
           <div className={`${styles.floatCard} ${styles.floatCard1}`}>
-            <div className={styles.floatCardIcon}><Smartphone size={22} color="#2563EB" /></div>
+            <Image
+              src="/images/hero-parent.jpg"
+              alt="Parent checking school notices on phone"
+              width={44}
+              height={44}
+              className={styles.floatAvatar}
+            />
             <div>
               <div className={styles.floatCardTitle}>Parent Portal</div>
               <div className={styles.floatCardSub}>Verified announcements & notices</div>
             </div>
           </div>
+
+          {/* Floating Institutional Control card */}
           <div className={`${styles.floatCard} ${styles.floatCard2}`}>
             <div className={styles.floatCardIcon}><ShieldCheck size={22} color="#10B981" /></div>
             <div>

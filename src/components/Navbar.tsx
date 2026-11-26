@@ -78,20 +78,17 @@ export default function Navbar() {
   return (
     <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
-        {/* Logo */}
-        <Link href="/" className={styles.logo}>
-          <div className={styles.logoIcon}>
+        {/* Animated Logo */}
+        <Link href="/" className={`${styles.logo} ${styles.logoAnimated}`}>
+          <span className={styles.logoFrame}>
             <Image
-              src="/logo.png"
+              src="/Logo.png"
               alt="School247 Logo"
-              width={38}
-              height={38}
+              width={220}
+              height={56}
+              className={styles.logoImg}
               priority
-              className={styles.logoImage}
             />
-          </div>
-          <span className={styles.logoText}>
-            School<span className={styles.logoTextAccent}>247</span>
           </span>
         </Link>
 

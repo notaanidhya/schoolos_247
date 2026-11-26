@@ -36,6 +36,14 @@ const FOOTER_LINKS = {
   ],
 };
 
+const CONTACT_EMAILS = [
+  'hello@school247.in',
+  'contact@school247.in',
+  'support@school247.in',
+  'help@school247.in',
+  'admin@school247.in',
+];
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -44,18 +52,15 @@ export default function Footer() {
         <div className={styles.top}>
           {/* Brand */}
           <div className={styles.brand}>
-            <Link href="/" className={styles.logo}>
-              <div className={styles.logoIcon}>
+            <Link href="/" className={`${styles.logo} ${styles.logoAnimated}`}>
+              <span className={styles.logoFrame}>
                 <Image
-                  src="/logo.png"
+                  src="/Logo.png"
                   alt="School247 Logo"
-                  width={38}
-                  height={38}
-                  className={styles.logoImage}
+                  width={200}
+                  height={50}
+                  className={styles.logoImg}
                 />
-              </div>
-              <span className={styles.logoText}>
-                School<span className={styles.logoTextAccent}>247</span>
               </span>
             </Link>
             <p className={styles.tagline}>
@@ -64,7 +69,16 @@ export default function Footer() {
               teachers through intelligent workflows.
             </p>
             <div className={styles.contact}>
-              <a href="mailto:hello@school247.in" className={styles.contactLink}>hello@school247.in</a>
+              {CONTACT_EMAILS.map((email, idx) => (
+                <span key={email}>
+                  <a href={`mailto:${email}`} className={styles.contactLink}>
+                    {email}
+                  </a>
+                  {idx < CONTACT_EMAILS.length - 1 && (
+                    <span className={styles.contactSep}> · </span>
+                  )}
+                </span>
+              ))}
               <span className={styles.contactSep}>·</span>
               <span className={styles.contactText}>India</span>
             </div>

@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
 import { FileSpreadsheet, MessageSquare, Shuffle, BarChart3 } from 'lucide-react';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import styles from './ProblemsSection.module.css';
@@ -30,6 +33,41 @@ const PROBLEMS = [
 ];
 
 export default function ProblemsSection() {
+  const gridRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const node = gridRef.current;
+    if (!node) return;
+
+    const prefersReduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReduced) {
+      setIsVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.18,
+        rootMargin: '0px 0px -40px 0px',
+      }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className={`section ${styles.section}`}>
       <div className="container">
@@ -44,17 +82,27 @@ export default function ProblemsSection() {
           </div>
         </AnimateOnScroll>
 
-        <div className={styles.grid}>
+        <div
+          ref={gridRef}
+          className={`${styles.grid} ${isVisible ? styles.gridVisible : ''}`}
+        >
           {PROBLEMS.map((p, i) => (
-            <AnimateOnScroll key={p.title} delay={i * 100}>
-              <div className={styles.card}>
-                <div className={styles.iconWrap} style={{ '--card-color': p.color } as React.CSSProperties}>
-                  <span className={styles.icon}>{p.icon}</span>
-                </div>
-                <h3 className={styles.cardTitle}>{p.title}</h3>
-                <p className={styles.cardDesc}>{p.desc}</p>
+            <div
+              key={p.title}
+              className={`${styles.card} ${isVisible ? styles.cardVisible : ''}`}
+              style={
+                {
+                  '--card-color': p.color,
+                  '--stagger-delay': `${i * 110}ms`,
+                } as React.CSSProperties
+              }
+            >
+              <div className={styles.iconWrap}>
+                <span className={styles.icon}>{p.icon}</span>
               </div>
-            </AnimateOnScroll>
+              <h3 className={styles.cardTitle}>{p.title}</h3>
+              <p className={styles.cardDesc}>{p.desc}</p>
+            </div>
           ))}
         </div>
       </div>

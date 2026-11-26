@@ -6,12 +6,10 @@ import {
   deleteDemoBooking,
   DemoBooking,
 } from '@/lib/db';
-import fs from 'fs';
-import path from 'path';
 
 export async function GET() {
   try {
-    const bookings = getAllDemoBookings();
+    const bookings = await getAllDemoBookings();
     return NextResponse.json({
       success: true,
       count: bookings.length,
@@ -43,7 +41,6 @@ export async function POST(request: Request) {
       notes,
     } = body;
 
-    // Basic validation
     if (!fullName || !schoolName || !phone || !email) {
       return NextResponse.json(
         { error: 'Missing required contact information (Name, School, Phone, Email).' },
@@ -51,8 +48,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // Persist to SQLite Database
-    const newBooking = createDemoBooking({
+    const newBooking = await createDemoBooking({
       fullName,
       schoolName,
       role: role || 'Principal / School Head',
@@ -65,27 +61,6 @@ export async function POST(request: Request) {
       preferredDate: preferredDate || 'Earliest available',
       notes: notes || '',
     });
-
-    // Mirror to data/leads.json as human-readable JSON backup
-    try {
-      const dataDir = path.join(process.cwd(), 'data');
-      if (!fs.existsSync(dataDir)) {
-        fs.mkdirSync(dataDir, { recursive: true });
-      }
-      const leadsFile = path.join(dataDir, 'leads.json');
-      let currentLeads = [];
-      if (fs.existsSync(leadsFile)) {
-        try {
-          currentLeads = JSON.parse(fs.readFileSync(leadsFile, 'utf-8'));
-        } catch {
-          currentLeads = [];
-        }
-      }
-      currentLeads.unshift(newBooking);
-      fs.writeFileSync(leadsFile, JSON.stringify(currentLeads, null, 2), 'utf-8');
-    } catch (fsErr) {
-      console.warn('Backup write to leads.json failed:', fsErr);
-    }
 
     console.log('[School247 Database Record Saved]:', newBooking.id, newBooking.schoolName);
 
@@ -118,7 +93,7 @@ export async function PATCH(request: Request) {
       );
     }
 
-    const updated = updateDemoBookingStatus(id, status as DemoBooking['status']);
+    const updated = await updateDemoBookingStatus(id, status as DemoBooking['status']);
     if (!updated) {
       return NextResponse.json(
         { error: `Booking with ID ${id} not found.` },
@@ -151,7 +126,7 @@ export async function DELETE(request: Request) {
       );
     }
 
-    const deleted = deleteDemoBooking(id);
+    const deleted = await deleteDemoBooking(id);
     if (!deleted) {
       return NextResponse.json(
         { error: `Booking with ID ${id} not found.` },

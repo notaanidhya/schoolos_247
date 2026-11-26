@@ -1,6 +1,4 @@
-import Database from 'better-sqlite3';
-import path from 'path';
-import fs from 'fs';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 export interface DemoBooking {
   id: string;
@@ -20,143 +18,168 @@ export interface DemoBooking {
   updatedAt?: string;
 }
 
-let dbInstance: Database.Database | null = null;
-
-export function getDatabase(): Database.Database {
-  if (!dbInstance) {
-    const dataDir = path.join(process.cwd(), 'data');
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
-    }
-    const dbPath = path.join(dataDir, 'school247.db');
-    dbInstance = new Database(dbPath);
-
-    // Initialize Schema
-    dbInstance.exec(`
-      CREATE TABLE IF NOT EXISTS demo_bookings (
-        id TEXT PRIMARY KEY,
-        created_at TEXT NOT NULL,
-        full_name TEXT NOT NULL,
-        school_name TEXT NOT NULL,
-        role TEXT,
-        phone TEXT NOT NULL,
-        email TEXT NOT NULL,
-        city TEXT,
-        student_count TEXT,
-        modules TEXT,
-        existing_system TEXT,
-        preferred_date TEXT,
-        notes TEXT,
-        status TEXT DEFAULT 'NEW',
-        updated_at TEXT
-      );
-      CREATE INDEX IF NOT EXISTS idx_demo_bookings_created_at ON demo_bookings(created_at DESC);
-      CREATE INDEX IF NOT EXISTS idx_demo_bookings_status ON demo_bookings(status);
-    `);
-  }
-  return dbInstance;
+interface DemoBookingRow {
+  id: string;
+  created_at: string;
+  full_name: string;
+  school_name: string;
+  role: string | null;
+  phone: string;
+  email: string;
+  city: string | null;
+  student_count: string | null;
+  modules: string[] | string | null;
+  existing_system: string | null;
+  preferred_date: string | null;
+  notes: string | null;
+  status: DemoBooking['status'];
+  updated_at: string | null;
 }
 
-export function createDemoBooking(data: Omit<DemoBooking, 'id' | 'createdAt' | 'status'> & { id?: string }): DemoBooking {
-  const db = getDatabase();
+let supabaseClient: SupabaseClient | null = null;
+
+export function getSupabaseClient(): SupabaseClient {
+  if (!supabaseClient) {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+    if (!supabaseUrl || !serviceRoleKey) {
+      throw new Error(
+        'Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY environment variables'
+      );
+    }
+
+    supabaseClient = createClient(supabaseUrl, serviceRoleKey, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+    });
+  }
+
+  return supabaseClient;
+}
+
+function parseModules(rawModules: string[] | string | null): string[] {
+  if (Array.isArray(rawModules)) {
+    return rawModules;
+  }
+  if (typeof rawModules === 'string') {
+    try {
+      const parsed = JSON.parse(rawModules || '[]');
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  }
+  return [];
+}
+
+function mapRowToBooking(row: DemoBookingRow): DemoBooking {
+  return {
+    id: row.id,
+    createdAt: row.created_at,
+    fullName: row.full_name,
+    schoolName: row.school_name,
+    role: row.role || 'Principal / School Head',
+    phone: row.phone,
+    email: row.email,
+    city: row.city || '',
+    studentCount: row.student_count || '500-1000',
+    modules: parseModules(row.modules),
+    existingSystem: row.existing_system || 'Spreadsheets / Registers',
+    preferredDate: row.preferred_date || 'Earliest Available',
+    notes: row.notes || '',
+    status: row.status,
+    updatedAt: row.updated_at || undefined,
+  };
+}
+
+export async function createDemoBooking(
+  data: Omit<DemoBooking, 'id' | 'createdAt' | 'status'> & { id?: string }
+): Promise<DemoBooking> {
+  const supabase = getSupabaseClient();
   const id = data.id || `demo_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
   const createdAt = new Date().toISOString();
-  const status = 'NEW';
-  const modulesJson = JSON.stringify(data.modules || []);
+  const status: DemoBooking['status'] = 'NEW';
 
-  const stmt = db.prepare(`
-    INSERT INTO demo_bookings (
-      id, created_at, full_name, school_name, role, phone, email,
-      city, student_count, modules, existing_system, preferred_date,
-      notes, status, updated_at
-    ) VALUES (
-      ?, ?, ?, ?, ?, ?, ?,
-      ?, ?, ?, ?, ?,
-      ?, ?, ?
-    )
-  `);
-
-  stmt.run(
+  const rowPayload = {
     id,
-    createdAt,
-    data.fullName,
-    data.schoolName,
-    data.role || 'Principal / School Head',
-    data.phone,
-    data.email,
-    data.city || '',
-    data.studentCount || '500-1000',
-    modulesJson,
-    data.existingSystem || 'Spreadsheets / Registers',
-    data.preferredDate || 'Earliest Available',
-    data.notes || '',
-    status,
-    createdAt
-  );
-
-  return {
-    id,
-    createdAt,
-    fullName: data.fullName,
-    schoolName: data.schoolName,
+    created_at: createdAt,
+    full_name: data.fullName,
+    school_name: data.schoolName,
     role: data.role || 'Principal / School Head',
     phone: data.phone,
     email: data.email,
     city: data.city || '',
-    studentCount: data.studentCount || '500-1000',
+    student_count: data.studentCount || '500-1000',
     modules: data.modules || [],
-    existingSystem: data.existingSystem || 'Spreadsheets / Registers',
-    preferredDate: data.preferredDate || 'Earliest Available',
+    existing_system: data.existingSystem || 'Spreadsheets / Registers',
+    preferred_date: data.preferredDate || 'Earliest Available',
     notes: data.notes || '',
-    status: 'NEW',
-    updatedAt: createdAt,
+    status,
+    updated_at: createdAt,
   };
+
+  const { data: inserted, error } = await supabase
+    .from('demo_bookings')
+    .insert(rowPayload)
+    .select('*')
+    .single();
+
+  if (error) {
+    throw new Error(`Failed to create demo booking: ${error.message}`);
+  }
+
+  return mapRowToBooking(inserted as DemoBookingRow);
 }
 
-export function getAllDemoBookings(): DemoBooking[] {
-  const db = getDatabase();
-  const stmt = db.prepare(`SELECT * FROM demo_bookings ORDER BY created_at DESC`);
-  const rows = stmt.all() as any[];
+export async function getAllDemoBookings(): Promise<DemoBooking[]> {
+  const supabase = getSupabaseClient();
+  const { data: rows, error } = await supabase
+    .from('demo_bookings')
+    .select('*')
+    .order('created_at', { ascending: false });
 
-  return rows.map((r) => ({
-    id: r.id,
-    createdAt: r.created_at,
-    fullName: r.full_name,
-    schoolName: r.school_name,
-    role: r.role,
-    phone: r.phone,
-    email: r.email,
-    city: r.city,
-    studentCount: r.student_count,
-    modules: (() => {
-      try {
-        return JSON.parse(r.modules || '[]');
-      } catch {
-        return [];
-      }
-    })(),
-    existingSystem: r.existing_system,
-    preferredDate: r.preferred_date,
-    notes: r.notes,
-    status: r.status,
-    updatedAt: r.updated_at,
-  }));
+  if (error) {
+    throw new Error(`Failed to fetch demo bookings: ${error.message}`);
+  }
+
+  return ((rows || []) as DemoBookingRow[]).map(mapRowToBooking);
 }
 
-export function updateDemoBookingStatus(id: string, status: DemoBooking['status']): boolean {
-  const db = getDatabase();
-  const stmt = db.prepare(`
-    UPDATE demo_bookings
-    SET status = ?, updated_at = ?
-    WHERE id = ?
-  `);
-  const result = stmt.run(status, new Date().toISOString(), id);
-  return result.changes > 0;
+export async function updateDemoBookingStatus(
+  id: string,
+  status: DemoBooking['status']
+): Promise<boolean> {
+  const supabase = getSupabaseClient();
+  const { data, error } = await supabase
+    .from('demo_bookings')
+    .update({
+      status,
+      updated_at: new Date().toISOString(),
+    })
+    .eq('id', id)
+    .select('id');
+
+  if (error) {
+    throw new Error(`Failed to update demo booking status: ${error.message}`);
+  }
+
+  return Array.isArray(data) && data.length > 0;
 }
 
-export function deleteDemoBooking(id: string): boolean {
-  const db = getDatabase();
-  const stmt = db.prepare(`DELETE FROM demo_bookings WHERE id = ?`);
-  const result = stmt.run(id);
-  return result.changes > 0;
+export async function deleteDemoBooking(id: string): Promise<boolean> {
+  const supabase = getSupabaseClient();
+  const { data, error } = await supabase
+    .from('demo_bookings')
+    .delete()
+    .eq('id', id)
+    .select('id');
+
+  if (error) {
+    throw new Error(`Failed to delete demo booking: ${error.message}`);
+  }
+
+  return Array.isArray(data) && data.length > 0;
 }
