@@ -36,6 +36,14 @@ const FOOTER_LINKS = {
   ],
 };
 
+const CONTACT_EMAILS = [
+  'hello@school247.in',
+  'contact@school247.in',
+  'support@school247.in',
+  'help@school247.in',
+  'admin@school247.in',
+];
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -61,7 +69,16 @@ export default function Footer() {
               teachers through intelligent workflows.
             </p>
             <div className={styles.contact}>
-              <a href="mailto:hello@school247.in" className={styles.contactLink}>hello@school247.in</a>
+              {CONTACT_EMAILS.map((email, idx) => (
+                <span key={email}>
+                  <a href={`mailto:${email}`} className={styles.contactLink}>
+                    {email}
+                  </a>
+                  {idx < CONTACT_EMAILS.length - 1 && (
+                    <span className={styles.contactSep}> · </span>
+                  )}
+                </span>
+              ))}
               <span className={styles.contactSep}>·</span>
               <span className={styles.contactText}>India</span>
             </div>
