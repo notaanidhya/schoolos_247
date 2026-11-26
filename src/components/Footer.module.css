@@ -181,8 +181,9 @@
 
 .contact {
   display: flex;
-  align-items: center;
-  gap: var(--space-3);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
 }
 
 .contactLink {
@@ -194,8 +195,12 @@
 
 .contactLink:hover { color: white; }
 
-.contactSep { color: rgba(255,255,255,0.3); }
-.contactText { font-size: var(--text-sm); color: rgba(255,255,255,0.4); }
+.contactSep { display: none; }
+.contactText {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.4);
+  margin-top: var(--space-1);
+}
 
 /* Links */
 .links {
