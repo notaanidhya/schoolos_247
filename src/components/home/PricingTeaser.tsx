@@ -109,7 +109,7 @@ export default function PricingTeaser() {
               <div className={styles.ctaWrapper}>
                 <Link
                   href={`/book-demo?plan=${tier.name.toLowerCase()}`}
-                  className={`btn ${tier.popular ? 'btn-primary' : 'btn-outline'} ${styles.cardBtn}`}
+                  className={`btn ${tier.popular ? 'btn-primary' : 'btn-secondary'} ${styles.cardBtn}`}
                 >
                   {tier.cta}
                 </Link>

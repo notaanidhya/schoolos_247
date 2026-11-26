@@ -251,7 +251,7 @@ export default function ModulesSection() {
               <Link href="/book-demo" className="btn btn-primary">
                 Request Demo for {current.name}
               </Link>
-              <Link href="/features" className="btn btn-outline">
+              <Link href="/features" className="btn btn-secondary">
                 Explore All Features →
               </Link>
             </div>

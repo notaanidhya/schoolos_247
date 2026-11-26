@@ -166,7 +166,7 @@ export default function BookDemoPage() {
                   <Link href="/" className="btn btn-primary">
                     Return to Homepage
                   </Link>
-                  <Link href="/platform" className="btn btn-outline">
+                  <Link href="/platform" className="btn btn-secondary">
                     Explore Platform Features
                   </Link>
                 </div>

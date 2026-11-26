@@ -152,10 +152,24 @@ h1, h2, h3, h4, h5, h6 {
 .card--navy h1, .card--navy h2, .card--navy h3, .card--navy h4, .card--navy h5, .card--navy h6,
 .card--gradient h1, .card--gradient h2, .card--gradient h3, .card--gradient h4,
 .gradient-bg-hero h1, .gradient-bg-hero h2, .gradient-bg-hero h3, .gradient-bg-hero h4,
-[class*="hero"] h1, [class*="hero"] h2, [class*="hero"] h3, [class*="hero"] h4,
-[class*="hero"] [class*="headline"], [class*="hero"] [class*="title"], [class*="hero"] [class*="Title"],
+[class*="hero"]:not([class*="card"]):not([class*="floatCard"]) > h1,
+[class*="hero"]:not([class*="card"]):not([class*="floatCard"]) > h2,
+[class*="hero"]:not([class*="card"]):not([class*="floatCard"]) > h3,
+[class*="hero"] [class*="heroTitle"],
+[class*="hero"] [class*="heroHeadline"],
 [data-dark="true"] h1, [data-dark="true"] h2, [data-dark="true"] h3 {
   color: var(--white);
+}
+
+/* Explicit rule: Any floating card or light card inside hero always keeps dark text */
+[class*="floatCard"], [class*="floatCard"] * {
+  color: var(--text);
+}
+[class*="floatCard"] [class*="Title"], [class*="floatCard"] [class*="title"] {
+  color: var(--navy) !important;
+}
+[class*="floatCard"] [class*="Sub"], [class*="floatCard"] [class*="sub"] {
+  color: var(--muted) !important;
 }
 
 .display-xl {
@@ -307,13 +321,39 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-outline {
   background: transparent;
+  color: var(--navy);
+  border-color: var(--border);
+}
+
+.btn-outline:hover {
+  background: var(--surface-alt);
+  border-color: var(--navy);
+  color: var(--navy);
+}
+
+/* On dark backgrounds, outline buttons use crisp white text and border */
+.bg-navy .btn-outline,
+.card--navy .btn-outline,
+.card--gradient .btn-outline,
+.gradient-bg-hero .btn-outline,
+[class*="hero"] .btn-outline,
+[data-dark="true"] .btn-outline,
+.btn-outline--white {
+  background: transparent;
   color: var(--white);
   border-color: rgba(255,255,255,0.4);
 }
 
-.btn-outline:hover {
+.bg-navy .btn-outline:hover,
+.card--navy .btn-outline:hover,
+.card--gradient .btn-outline:hover,
+.gradient-bg-hero .btn-outline:hover,
+[class*="hero"] .btn-outline:hover,
+[data-dark="true"] .btn-outline:hover,
+.btn-outline--white:hover {
   background: rgba(255,255,255,0.12);
   border-color: rgba(255,255,255,0.7);
+  color: var(--white);
 }
 
 .btn-ghost {

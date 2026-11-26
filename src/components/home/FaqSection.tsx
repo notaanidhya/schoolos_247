@@ -111,7 +111,7 @@ export default function FaqSection() {
             <strong>Have a question specific to your institution?</strong>
             <span>Our educational specialists are available to discuss your setup.</span>
           </div>
-          <Link href="/contact" className="btn btn-outline">
+          <Link href="/contact" className="btn btn-secondary">
             Speak to our team
           </Link>
         </div>

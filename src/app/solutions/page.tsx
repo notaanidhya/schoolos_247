@@ -109,7 +109,7 @@ export default function SolutionsPage() {
                   ))}
                 </ul>
                 <div className={styles.cardAction}>
-                  <Link href={`/solutions/${aud.slug}`} className="btn btn-outline">
+                  <Link href={`/solutions/${aud.slug}`} className="btn btn-secondary">
                     {aud.cta}
                   </Link>
                 </div>
